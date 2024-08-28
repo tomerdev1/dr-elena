@@ -1,12 +1,12 @@
 import Image from "next/image";
 import styles from "./Header.module.scss";
-import CustomSelect from "../Common/Select/CustomSelect";
-import { useContext } from "react";
-import { LanguageContext } from "@/pages/context/context";
 import { useLanguageContext } from "@/pages/hooks/useLanguageContext";
+import CustomSelect from "../Common/Select/CustomSelect";
+import { useTranslation } from "react-i18next";
 const Header: React.FC = () => {
   const { headerContainer } = styles;
   const { language, setLanguage } = useLanguageContext();
+  const { i18n } = useTranslation();
   const options = [
     {
       label: "עברית",
@@ -27,6 +27,7 @@ const Header: React.FC = () => {
 
   const handleChange = (value: string) => {
     setLanguage(value);
+    i18n.changeLanguage(value);
   };
 
   return (
