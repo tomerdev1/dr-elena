@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./Header.module.scss";
 import { useLanguageContext } from "@/pages/hooks/useLanguageContext";
-import CustomSelect from "../Common/Select/CustomSelect";
+import CustomSelect from "../common/Select/CustomSelect";
 import { useTranslation } from "react-i18next";
 const Header: React.FC = () => {
   const { headerContainer } = styles;
