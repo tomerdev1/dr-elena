@@ -17,6 +17,6 @@ const resources = {
   },
 };
 
-i18next.use(initReactI18next).init({ resources, lng: "he" });
+i18next.use(initReactI18next).init({ resources, lng: "hebrew" });
 
 export default i18next;
