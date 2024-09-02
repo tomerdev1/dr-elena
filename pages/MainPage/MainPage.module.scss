@@ -1,15 +1,10 @@
 @import "../../styles/variables";
 
 .app {
-    background-color: red;
     height: 90vh;
-    display: flex;
-    flex-direction: column;   
-    .content {
-        margin-top: 30px;
-        background-color: green;
-        font-size: xx-large;
-    }
+    position: relative;
+    // margin: 0 2rem;
+    overflow: hidden;
 }
 .rtl {
     direction: rtl;

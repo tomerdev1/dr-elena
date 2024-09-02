@@ -1,0 +1,79 @@
+@import "../../../styles/variables";
+.introContainer {
+  height: 86vh;
+  position: relative;
+  .coverContainer {
+    position: relative;
+    display: flex;
+    height: 100%;
+    .coverContent {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      .coverContentItem {
+        display: flex;
+        padding: 0 $default-padding;
+        flex: 1;
+        color: white;
+        flex-direction: column;
+        .introText {
+          color: $text-primary;
+          text-align: center;
+          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+          white-space: pre-line;
+          transform: translateY(6rem);
+          align-self: center;
+        }
+        .bodyText {
+          font-size: x-large;
+        }
+        .titleText {
+          font-size: xx-large;
+          font-weight: bolder;
+          padding-bottom: 0.4rem;
+        }
+        .doctorImage {
+          align-self: flex-end;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .introContainer {
+    height: 90vh;
+    .coverContent {
+      flex-direction: column;
+      .introText {
+        transform: translateY(7rem) !important;
+      }
+      .titleText {
+        font-size: large !important;
+      }
+      .bodyText {
+        font-size: medium !important;
+      }
+      .doctorImage {
+        left: unset;
+        right: -2rem;
+      }
+    }
+  }
+}
+
+// @media (max-width: 768px) {
+//   .imageContent {
+//     flex-direction: column !important;
+//     .introTitle {
+//       font-size: larger !important;
+//       font-weight: bold !important;
+//     }
+//     .imageContentItem {
+//       transform: translateY(5rem);
+//     }
+//   }
+// }

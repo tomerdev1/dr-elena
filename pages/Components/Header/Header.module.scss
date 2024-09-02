@@ -1,7 +1,31 @@
+@import "../../../styles/variables";
+
 .headerContainer {
-    width: 100%;
+  width: -webkit-fill-available;
+  background-color: $transparent-white;
+  display: flex;
+  height: 8rem;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  border-bottom: 1px solid gray;
+  padding: 0 $default-padding;
+  .selectContainer {
+    min-width: 120px;
+    max-width: 120px;
+    flex: 1;
+  }
+  .logoContainer {
+    flex: 2;
     display: flex;
-    height: 16vh;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+.headerContainerMobile {
+  height: 6rem;
 }
