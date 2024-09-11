@@ -1,1 +1,16 @@
-$colora: #002000
+@use "sass:color";
+
+$primary: #749dce;
+$primary-d: #447bbd;
+$primary-l: #c7d8eb;
+$background: #325c8f;
+$background-d: #223e5f;
+$background-dd: #1d3552;
+$black: #111f30;
+$text-primary: #f1f5fa;
+$default-padding: 2rem;
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}

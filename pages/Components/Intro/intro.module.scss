@@ -1,0 +1,130 @@
+@import "../../../styles/variables";
+.introContainer {
+  height: 86vh;
+  position: relative;
+  .coverContainer {
+    position: relative;
+    display: flex;
+    height: 100%;
+    .coverGradient {
+      position: absolute;
+      background: linear-gradient(0.5turn, $black 12%, rgba(0, 0, 0, 0.2));
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      .coverContent {
+        position: absolute;
+        top: 16%;
+        // color: $primary-l;
+        color: $text-primary;
+        // color: $default;
+        text-align: center;
+        display: flex;
+        width: 500px;
+        flex-direction: column;
+        .titleText {
+          font-size: 40px;
+          font-weight: bolder;
+          // line-height: 150%;
+          letter-spacing: 4px;
+        }
+        .subtitleText {
+          font-size: x-large;
+          line-height: 125%;
+          letter-spacing: 2px;
+          // font-weight: bold;
+        }
+      }
+      // .coverGradient {
+      //   background: red;
+      //   width: 100%;
+      //   height: 100%;
+
+      // }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .introContainer {
+    height: 90vh;
+    .coverContent {
+      flex-direction: column;
+      width: 80% !important;
+      .titleText {
+        font-size: x-large !important;
+      }
+      .subtitleText {
+        font-size: large !important;
+      }
+    }
+  }
+}
+
+// @media (max-width: 768px) {
+//   .introContainer {
+//     height: 90vh;
+//     .coverContent {
+//       flex-direction: column;
+//       .introText {
+//         transform: translateY(7rem) !important;
+//       }
+//       .titleText {
+//         font-size: large !important;
+//       }
+//       .bodyText {
+//         font-size: medium !important;
+//       }
+//       .doctorImage {
+//         left: unset;
+//         right: -2rem;
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .imageContent {
+//     flex-direction: column !important;
+//     .introTitle {
+//       font-size: larger !important;
+//       font-weight: bold !important;
+//     }
+//     .imageContentItem {
+//       transform: translateY(5rem);
+//     }
+//   }
+// }
+
+// .coverContentItem {
+//   display: flex;
+//   padding: 0 $default-padding;
+//   justify-content: center;
+//   align-items: center;
+//   color: white;
+//   flex-direction: column;
+//   width: 300px;
+//   background-color: red;
+//   .introText {
+//     color: $text-primary;
+//     text-align: center;
+//     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+//     white-space: pre-line;
+//     transform: translateY(6rem);
+//     align-self: center;
+//   }
+//   .bodyText {
+//     font-size: x-large;
+//   }
+//   .titleText {
+//     font-size: xx-large;
+//     font-weight: bolder;
+//     padding-bottom: 0.4rem;
+//   }
+//   .doctorImage {
+//     align-self: flex-end;
+//     position: absolute;
+//     bottom: 0;
+//   }
+// }
