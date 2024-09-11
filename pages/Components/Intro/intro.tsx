@@ -1,6 +1,5 @@
 import styles from "./intro.module.scss";
 import { useTranslation } from "react-i18next";
-import { cn } from "@/lib/utils";
 import useIsMobile from "@/pages/hooks/useIsMobile";
 import CustomImage from "../common/Image/CustomImage";
 
@@ -8,14 +7,10 @@ const Intro: React.FC = () => {
   const {
     introContainer,
     coverContent,
-    coverContentItem,
     coverContainer,
-
     titleText,
     coverGradient,
     subtitleText,
-    bodyText,
-    doctorImage,
   } = styles;
   const { t } = useTranslation();
   const isMobile = useIsMobile();
@@ -45,13 +40,3 @@ const Intro: React.FC = () => {
 };
 
 export default Intro;
-
-/*
-          <div className={coverContentItem}>
-            <span className={cn(introText, titleText)}>{t("intro.a")}</span>
-            <span className={cn(introText, bodyText)}>{t("intro.b")}</span>
-            <span className={cn(introText, bodyText)}>{t("intro.c")}</span>
-            <span className={cn(introText, bodyText)}>{t("intro.d")}</span>
-            {/* <span className={cn(introText, introBody)}>{t("intro.e")}</span> 
-            </div>
-*/
