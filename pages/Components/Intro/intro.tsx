@@ -1,7 +1,7 @@
 import styles from "./intro.module.scss";
 import { useTranslation } from "react-i18next";
 import useIsMobile from "@/pages/hooks/useIsMobile";
-import CustomImage from "../common/Image/CustomImage";
+import CustomImage from "../common/image/customImage";
 
 const Intro: React.FC = () => {
   const {
@@ -18,11 +18,11 @@ const Intro: React.FC = () => {
     <div className={introContainer}>
       <div className={coverContainer}>
         <CustomImage
-          src={"/assets/images/cover5.jpg"}
+          src={"/assets/images/cover6.jpg"}
           width={0}
           height={0}
           style={{
-            objectPosition: isMobile ? "35%" : "50%",
+            objectPosition: isMobile ? "60%" : "50%",
             objectFit: "cover",
             height: "100%",
             width: "100%",

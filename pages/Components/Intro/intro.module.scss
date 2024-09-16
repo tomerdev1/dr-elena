@@ -23,7 +23,7 @@
         flex-direction: column;
         .titleText {
           font-size: 40px;
-          font-weight: bolder;
+          font-weight: 700;
           letter-spacing: 4px;
         }
         .subtitleText {
@@ -42,9 +42,6 @@
     .coverContent {
       flex-direction: column;
       width: 80% !important;
-      .titleText {
-        font-size: x-large !important;
-      }
       .subtitleText {
         font-size: large !important;
       }
