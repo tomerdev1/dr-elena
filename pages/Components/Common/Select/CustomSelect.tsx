@@ -15,9 +15,7 @@ const CustomSelect: React.FC<Props> = (props) => {
     <Select
       {...props}
       className={selectProps}
-      // variant="outlined"
       labelRender={labelRender}
-      // popupClassName={popupProps}
       optionRender={(option) => (
         <Space>
           <span role="img">{option.data.emoji}</span>

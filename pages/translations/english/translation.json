@@ -1,10 +1,34 @@
 {
-    "intro": {
-        "name": "Dr. Skliarok Clinic",
-        "a": "You're smile It's the first thing people notice, that's why your smile is our business card.",
-        "b": "lalalalallala",
-        "c": "lalalalallala",
-        "d": "lalalalallala"
-        
-    }
+  "intro": {
+    "name": "Dr. Skliarok Clinic",
+    "a": "You're smile It's the first thing people notice, that's why your smile is our business card.",
+    "b": "lalalalallala",
+    "c": "lalalalallala",
+    "d": "lalalalallala"
+  },
+  "treatments": {
+    "title": "Our Specialty",
+    "items": [
+      {
+        "title": "Implants",
+        "body": "Solution for partial or complete lack of teeth. Made of titanium and are the basis for placing a permanent restoration.\nTreatment is performed painlessly with short recovery times.",
+        "id": 0
+      },
+      {
+        "title": "Rehabilitation",
+        "body": "A dental process that includes crowns, bridges, dentures and more.\nThe goal of oral rehabilitation is to restore the chewing ability and aesthetic appearance to the teeth and jaws.",
+        "id": 1
+      },
+      {
+        "title": "Aesthetics",
+        "body": "A field that includes a variety of treatments designed to improve the appearance of the teeth in terms of color, filling broken teeth, closing gaps, improving the shape of the teeth and more. After consultation and diagnosis, treatment can be planned and adjusted while understanding and considering the patient's needs.",
+        "id": 2
+      },
+      {
+        "title": "Maintenance",
+        "body": "Preventive care includes a routine examination, fillings (restoration), root canals, bad breath treatment, tartar removal and guidance, early detection of gum disease or lesions in the oral cavity.",
+        "id": 3
+      }
+    ]
+  }
 }

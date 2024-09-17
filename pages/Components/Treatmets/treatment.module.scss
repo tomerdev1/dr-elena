@@ -1,0 +1,35 @@
+@import "../../../styles/variables";
+.treatment {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  padding: 20px;
+  background-color: $primary-ll;
+  .treatmentIcon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .treatmentTitle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary-d;
+    font-size: larger;
+    font-weight: 600;
+  }
+  .treatmentBody {
+    flex: 5;
+    padding: 0 2rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    font-weight: 300;
+  }
+}

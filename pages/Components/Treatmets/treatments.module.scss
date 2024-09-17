@@ -1,0 +1,28 @@
+@import "../../../styles/variables";
+
+.treatmentsContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .treatmentsTitle {
+    font-size: x-large;
+    font-weight: bolder;
+    line-height: 450%;
+    color: $background-d;
+    letter-spacing: 1px;
+  }
+  .treatments {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .treatments {
+    flex-direction: column !important;
+    gap: 30px;
+  }
+}
