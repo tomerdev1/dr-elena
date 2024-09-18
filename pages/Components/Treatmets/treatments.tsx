@@ -3,12 +3,10 @@ import { useTranslation } from "react-i18next";
 import styles from "./treatments.module.scss";
 import Treatment from "./treatment";
 import { FC, SVGProps } from "react";
-import Implants from "@/public/assets/icons/treatments/implants";
-import Rehabilitation from "@/public/assets/icons/treatments/rehabilitation";
-import Maintenance from "@/public/assets/icons/treatments/Maintenance";
 import Aesthetics from "@/public/assets/icons/treatments/aesthetics";
 import Implants2 from "@/public/assets/icons/treatments/implants2";
 import Rehabilitation2 from "@/public/assets/icons/treatments/rehabilitation2";
+import Maintenance from "@/public/assets/icons/treatments/maintenance";
 
 interface TreatmentItem {
   title: string;
