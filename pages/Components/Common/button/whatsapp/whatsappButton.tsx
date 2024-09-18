@@ -15,18 +15,14 @@ const WhastsappButton: React.FC = () => {
   const isMobile = useIsMobile();
   const getWhatsAppLink = (): string => {
     const encodedMessage = data.message ? encodeURIComponent(data.message) : "";
-    if (isMobile) {
-      // Use whatsapp:// for mobile devices
+    if (isMobile)
       return `whatsapp://send?phone=${data.phoneNumber}&text=${encodedMessage}`;
-    } else {
-      // Use web.whatsapp.com for desktop devices
+    else
       return `https://web.whatsapp.com/send?phone=${data.phoneNumber}&text=${encodedMessage}`;
-    }
   };
 
   const handleClick = () => {
     const link = getWhatsAppLink();
-    // Open the link
     window.open(link, "_blank");
   };
 
