@@ -1,13 +1,43 @@
 {
   "intro": {
     "name": "Dr. Skliarok Clinic",
-    "a": "You're smile It's the first thing people notice, that's why your smile is our business card.",
-    "b": "lalalalallala",
-    "c": "lalalalallala",
-    "d": "lalalalallala"
+    "a": "You're smile It's the first thing people notice, that's why your smile is our business card."
+  },
+  "secondIntro": {
+    "title": {
+      "firstText": "Feel",
+      "marked": "Amazing",
+      "secondText": "About Your Oral Health"
+    },
+    "items": [
+      {
+        "text": "Dr. Skliarock's boutique dental clinic with a reputation for over 34 years.",
+        "id": 0
+      },
+      {
+        "text": "Quality service in a pleasant atmosphere with professional and sensitive staff.",
+        "id": 1
+      },
+      {
+        "text": "The clinic offers a unique approach for patients suffering from dental anxiety.",
+        "id": 2
+      },
+      {
+        "text": "In the clinic you can receive professional treatment in a relaxed atmosphere with flexible and customized treatment times",
+        "id": 3
+      },
+      {
+        "text": "A wide variety of treatments, from implants and restorative treatment at any level of difficulty to aesthetic treatments while adhering to the highest standards. Thanks to the advanced technology and our team of doctors, it is possible to achieve the highest quality results while being customized for each client.",
+        "id": 4
+      },
+      {
+        "text": "All treatments under one roof, Panoramic photography and consultation free of charge, Escort throughout the treatment and after its completion, Attached dental laboratory to provide immediate service, Free parking for clinic clients, Convenient payment layout.",
+        "id": 5
+      }
+    ]
   },
   "treatments": {
-    "title": "Our Specialty",
+    "title": "Our Specialties",
     "items": [
       {
         "title": "Implants",
@@ -21,7 +51,7 @@
       },
       {
         "title": "Aesthetics",
-        "body": "A field that includes a variety of treatments designed to improve the appearance of the teeth in terms of color, filling broken teeth, closing gaps, improving the shape of the teeth and more. After consultation and diagnosis, treatment can be planned and adjusted while understanding and considering the patient's needs.",
+        "body": "A field that includes a variety of treatments designed to improve the appearance of the teeth in terms of color, filling broken teeth, closing gaps, improving the shape of the teeth and more. After consultation and diagnosis, treatment can be planned and adjusted while understanding & considering patient's needs.",
         "id": 2
       },
       {

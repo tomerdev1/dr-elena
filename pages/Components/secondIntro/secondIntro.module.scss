@@ -1,0 +1,51 @@
+@import "../../../styles/variables.scss";
+.secondIntro {
+  background-color: $primary-ll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 30px 30px;
+  .titleContainer {
+    padding: 1.5rem 0;
+    font-size: 42px;
+    color: $background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .marker {
+      font-weight: lighter;
+      color: $background;
+      margin: 0 -0.4em;
+      padding: 0.1em 0.4em;
+      border-radius: 0.8em 0.3em;
+      background: transparent;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 225, 0, 0.1),
+        rgba(255, 225, 0, 0.5) 4%,
+        rgba(255, 225, 0, 0.3)
+      );
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+    .title {
+      padding: 0 1.5rem;
+      font-weight: lighter;
+    }
+  }
+  .secondIntroItems {
+    flex: 1;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .titleContainer {
+    font-size: x-large !important;
+  }
+  .secondIntroItems {
+    grid-template-columns: 1fr !important;
+  }
+}
