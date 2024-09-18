@@ -5,6 +5,7 @@ import Intro from "../components/intro/intro";
 import Treatments from "../components/treatmets/treatments";
 import Header from "../components/header/Header";
 import SecondIntro from "../components/secondIntro/secondIntro";
+import WhastsappButton from "../components/common/button/whatsapp/whatsappButton";
 
 const MainPage: React.FC = () => {
   const { app, rtl } = styles;
@@ -12,6 +13,7 @@ const MainPage: React.FC = () => {
   return (
     <div className={cn(app, language == "hebrew" && rtl)}>
       <Header />
+      <WhastsappButton />
       <Intro />
       <SecondIntro />
       <Treatments />

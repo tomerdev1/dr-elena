@@ -5,7 +5,7 @@ interface IconWrapperProps {
   icon: React.FC<React.SVGProps<SVGSVGElement>>; // Path to the icon component
   size?: number | string; // Optional size prop, default can be set
   fillColor?: string; // Optional fill color, default can be set
-  className: string;
+  className?: string;
 }
 
 const IconWrapper: React.FC<IconWrapperProps> = ({

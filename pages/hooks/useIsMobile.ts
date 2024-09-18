@@ -5,7 +5,10 @@ const useIsMobile = (breakpoint: number = 768) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= breakpoint);
+      setIsMobile(
+        window.innerWidth <= breakpoint ||
+          /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+      );
     };
 
     handleResize();
