@@ -61,5 +61,20 @@
         "id": 3
       }
     ]
+  },
+  "contactUs": {
+    "title": "Get In Touch",
+    "review": {
+      "id": 0,
+      "text": "Rate Us"
+    },
+    "address": {
+      "id": 1,
+      "text": "Naftali Palatin 1 St.\nRishon Lezion"
+    },
+    "workingHours": {
+      "id": 2,
+      "text":  "Sun-Thu \n9:00-17:00"
+    }
   }
 }
