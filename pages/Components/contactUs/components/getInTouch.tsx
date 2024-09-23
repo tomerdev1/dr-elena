@@ -74,7 +74,6 @@ const GetInTouch: React.FC = () => {
   };
   return (
     <div className={getInTouchContainer}>
-      <span className={title}>{t("contactUs.title")}</span>
       <div className={content}>
         <div className={circle} />
         <ReviewUs />

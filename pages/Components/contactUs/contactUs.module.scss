@@ -1,12 +1,29 @@
+@import "../../../styles/variables";
+
 .contactUsContainer {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  flex-direction: column;
   height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem;
+  .title {
+    display: flex;
+    color: $primary-d;
+    font-size: x-large;
+    font-weight: 200;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
-  .contactUsContainer {
+  .content {
     flex-direction: column !important;
   }
 }
