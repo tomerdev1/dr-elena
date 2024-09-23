@@ -1,0 +1,58 @@
+@import "../../../../styles/variables";
+
+.getInTouchContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  .content {
+    display: grid;
+    gap: 1px;
+    background-color: $primary-l;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .item {
+      background-color: white;
+      display: flex;
+      font-size: large;
+      flex-direction: column;
+      gap: 8px;
+      height: 140px;
+      font-weight: 600;
+      color: $background;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: pre-line;
+      .clickable {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .button {
+      font-size: large;
+      flex-direction: column;
+      gap: 8px;
+      height: 100%;
+      color: $background;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: pre-line;
+    }
+
+    .circle {
+      position: absolute;
+      background-color: white;
+      width: 70px;
+      height: 60px;
+      border-radius: 9999px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

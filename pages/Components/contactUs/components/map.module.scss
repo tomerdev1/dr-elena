@@ -1,0 +1,9 @@
+.mapContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .mapPreview {
+    border-radius: 20px;
+  }
+}

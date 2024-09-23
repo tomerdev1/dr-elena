@@ -1,4 +1,3 @@
-import useIsMobile from "@/pages/hooks/useIsMobile";
 import { useTranslation } from "react-i18next";
 import styles from "./treatments.module.scss";
 import Treatment from "./treatment";
@@ -23,7 +22,6 @@ interface TreatmentItem {
 
 const Treatments: React.FC = () => {
   const { t } = useTranslation();
-  const isMobile = useIsMobile();
   const { treatmentsContainer, treatments, treatmentsTitle } = styles;
   const items = t("treatments.items", {
     returnObjects: true,
