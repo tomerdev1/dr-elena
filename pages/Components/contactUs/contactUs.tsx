@@ -2,10 +2,13 @@ import { useTranslation } from "react-i18next";
 import GetInTouch from "./components/getInTouch";
 import Map from "./components/map";
 import styles from "./contactUs.module.scss";
+import SocialNetworks from "../socialNetworks/socialNetworks";
+import useIsMobile from "@/pages/hooks/useIsMobile";
 
 const ContactUs: React.FC = () => {
   const { contactUsContainer, title, content } = styles;
   const { t } = useTranslation();
+  const isMobile = useIsMobile();
   return (
     <div className={contactUsContainer}>
       <span className={title}>{t("contactUs.title")}</span>
@@ -13,6 +16,7 @@ const ContactUs: React.FC = () => {
         <GetInTouch />
         <Map />
       </div>
+      {isMobile && <SocialNetworks />}
     </div>
   );
 };

@@ -76,5 +76,8 @@
       "id": 2,
       "text":  "Sun-Thu \n9:00-17:00"
     }
+  },
+  "socialNetworks": {
+    "text": "Let's keep in touch"
   }
 }

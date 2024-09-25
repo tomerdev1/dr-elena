@@ -2,8 +2,8 @@ import { Button, ButtonProps } from "antd";
 
 interface Props extends ButtonProps {}
 
-const CustomButtom: React.FC<Props> = (props) => {
+const CustomButton: React.FC<Props> = (props) => {
   return <Button {...props}>{props.children}</Button>;
 };
 
-export default CustomButtom;
+export default CustomButton;
