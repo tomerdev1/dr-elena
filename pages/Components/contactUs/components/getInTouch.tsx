@@ -5,8 +5,10 @@ import AddressIcon from "@/public/assets/icons/getInTouch/address";
 import Phone from "@/public/assets/icons/getInTouch/phone";
 import Clock from "@/public/assets/icons/secondIntro/clock";
 import Rate from "@/public/assets/icons/getInTouch/rate";
-import CustomButtom from "../../common/button/customButton";
+import CustomButton from "../../common/button/customButton";
 import { cn } from "@/lib/utils";
+import SocialNetworks from "../../socialNetworks/socialNetworks";
+import useIsMobile from "@/pages/hooks/useIsMobile";
 
 const GetInTouch: React.FC = () => {
   const {
@@ -19,10 +21,11 @@ const GetInTouch: React.FC = () => {
     clickable,
   } = styles;
   const { t } = useTranslation();
+  const isMobile = useIsMobile();
   const ReviewUs = () => {
     return (
       <div className={cn(item)}>
-        <CustomButtom
+        <CustomButton
           className={cn(button, clickable)}
           size="small"
           type="link"
@@ -30,14 +33,14 @@ const GetInTouch: React.FC = () => {
         >
           <IconWrapper icon={Rate} size={42} />
           <span>{t("contactUs.review.text")}</span>
-        </CustomButtom>
+        </CustomButton>
       </div>
     );
   };
   const PhoneNumber = () => {
     return (
       <div className={cn(item)}>
-        <CustomButtom
+        <CustomButton
           className={cn(button, clickable)}
           size="small"
           type="link"
@@ -45,7 +48,7 @@ const GetInTouch: React.FC = () => {
         >
           <IconWrapper icon={Phone} size={42} />
           <span>053-551-8727</span>
-        </CustomButtom>
+        </CustomButton>
       </div>
     );
   };
@@ -60,7 +63,7 @@ const GetInTouch: React.FC = () => {
   const Address = () => {
     return (
       <div className={cn(item)}>
-        <CustomButtom
+        <CustomButton
           className={cn(button, clickable)}
           size="small"
           type="link"
@@ -68,7 +71,7 @@ const GetInTouch: React.FC = () => {
         >
           <IconWrapper icon={AddressIcon} size={42} />
           <span>{t("contactUs.address.text")}</span>
-        </CustomButtom>
+        </CustomButton>
       </div>
     );
   };
@@ -81,6 +84,7 @@ const GetInTouch: React.FC = () => {
         <WorkingHours />
         <Address />
       </div>
+      {!isMobile && <SocialNetworks />}
     </div>
   );
 };

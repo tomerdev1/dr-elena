@@ -1,6 +1,6 @@
 import Whastsapp from "@/public/assets/icons/socialMedia/whatsapp";
 import IconWrapper from "../../icon/icon";
-import CustomButtom from "../customButton";
+import CustomButton from "../customButton";
 import styles from "./whatsappButton.module.scss";
 import { useTranslation } from "react-i18next";
 import useIsMobile from "@/pages/hooks/useIsMobile";
@@ -27,7 +27,7 @@ const WhastsappButton: React.FC = () => {
   };
 
   return (
-    <CustomButtom
+    <CustomButton
       className={whatsappButton}
       shape="circle"
       size="large"

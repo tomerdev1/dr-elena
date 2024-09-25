@@ -7,12 +7,16 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin: 2rem;
+  background-color: $primary-ll;
+  border-radius: 30px 30px 0 0;
+  margin-top: 2rem;
   .title {
     display: flex;
-    color: $primary-d;
+    color: $background;
     font-size: x-large;
     font-weight: 200;
+    justify-content: center;
+    padding-top: 1rem;
   }
   .content {
     display: flex;
