@@ -4,6 +4,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin: 0 2rem;
   .content {
     display: grid;
     gap: 1px;
@@ -13,7 +14,7 @@
     align-items: center;
     position: relative;
     .item {
-      background-color: white;
+      background-color: $primary-ll;
       display: flex;
       font-size: large;
       flex-direction: column;
@@ -46,7 +47,7 @@
 
     .circle {
       position: absolute;
-      background-color: white;
+      background-color: $primary-ll;
       width: 70px;
       height: 60px;
       border-radius: 9999px;
