@@ -19,8 +19,8 @@ const MainPage: React.FC = () => {
       <Intro />
       <SecondIntro />
       <Treatments />
+      <Comments placeId="ChIJmekoWiT7MAoRT_eGVoHhDBM" />
       <ContactUs />
-      <Comments />
     </div>
   );
 };

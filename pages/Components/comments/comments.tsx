@@ -1,32 +1,88 @@
 import { useEffect, useState } from "react";
 
-interface CommentData {
-  googleReviews: any[];
-  // facebookComments: any[];
-  // instagramComments: any[];
-}
+type Review = {
+  author_name: string;
+  rating: number;
+  text: string;
+  relative_time_description: string;
+};
 
-const Comments: React.FC = () => {
-  const [data, setData] = useState<CommentData | null>(null);
-  const [loading, setLoading] = useState(true);
+const BusinessReviews: React.FC<{ placeId: string }> = ({ placeId }) => {
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchComments = async () => {
+    const fetchReviews = async (placeId: string) => {
+      setLoading(true);
+      setError(null);
+
       try {
-        const res = await fetch("/api/comments");
-        const json = await res.json();
-        setData(json);
-      } catch (error) {
-        console.error("Error fetching comments:", error);
+        const response = await fetch(
+          `/api/fetchGoogleReviews?placeId=${placeId}`
+        );
+
+        // Check if the response is okay
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status} ${response.statusText}`);
+        }
+
+        // Check if response body is empty
+        const text = await response.text();
+        if (!text) {
+          throw new Error("Empty response from the server.");
+        }
+
+        // Try parsing the response
+        const data = JSON.parse(text);
+
+        // Check if data has valid reviews
+        if (data && Array.isArray(data)) {
+          setReviews(data);
+        } else {
+          setError("No reviews found");
+        }
+      } catch (err: any) {
+        console.error("Failed to fetch reviews:", err);
+        setError(err.message || "Failed to fetch reviews");
       } finally {
         setLoading(false);
       }
     };
-    fetchComments();
-  }, []);
-  console.log(data);
 
-  return <div>lala</div>;
+    if (placeId) {
+      fetchReviews(placeId);
+    }
+  }, [placeId]);
+
+  if (loading) {
+    return <div>Loading reviews...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  return (
+    <div>
+      <h3>Business Reviews</h3>
+      {reviews.length > 0 ? (
+        <ul>
+          {reviews.map((review, index) => (
+            <li key={index}>
+              <p>
+                <strong>{review.author_name}</strong> ({review.rating} stars)
+              </p>
+              <p>{review.text}</p>
+              <p>{review.relative_time_description}</p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No reviews found</p>
+      )}
+    </div>
+  );
 };
 
-export default Comments;
+export default BusinessReviews;
