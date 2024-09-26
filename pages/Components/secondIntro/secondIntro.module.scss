@@ -1,10 +1,12 @@
 @import "../../../styles/variables.scss";
+
 .secondIntro {
   background-color: $primary-ll;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 0 0 30px 30px;
+
   .titleContainer {
     padding: 1.5rem 0;
     font-size: 42px;
@@ -12,6 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .marker {
       font-weight: lighter;
       color: $background;
@@ -19,6 +22,7 @@
       padding: 0.1em 0.4em;
       border-radius: 0.8em 0.3em;
       background: transparent;
+      background-size: 0% 100%; /* Start hidden */
       background-image: linear-gradient(
         to right,
         rgba(255, 225, 0, 0.1),
@@ -27,12 +31,19 @@
       );
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
+      animation-name: highlight;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      background-repeat: no-repeat;
     }
+
     .title {
       padding: 0 1.5rem;
       font-weight: lighter;
     }
   }
+
   .secondIntroItems {
     flex: 1;
     display: grid;
@@ -47,5 +58,15 @@
   }
   .secondIntroItems {
     grid-template-columns: 1fr !important;
+  }
+}
+
+@keyframes highlight {
+  from {
+    background-size: 0% 100%; /* Start hidden */
+  }
+
+  to {
+    background-size: 200% 100%; /* Fully visible */
   }
 }
