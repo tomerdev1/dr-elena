@@ -17,6 +17,26 @@ const resources = {
   },
 };
 
-i18next.use(initReactI18next).init({ resources, lng: "hebrew" });
+export const getSavedLanguage = () => {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem("language") || "hebrew";
+  }
+  return "hebrew";
+};
+
+i18next.use(initReactI18next).init({
+  resources,
+  lng: getSavedLanguage(),
+  interpolation: {
+    escapeValue: false,
+  },
+  fallbackLng: "hebrew",
+});
+
+i18next.on("languageChanged", (lng) => {
+  if (typeof window !== "undefined") {
+    localStorage.setItem("language", lng);
+  }
+});
 
 export default i18next;
