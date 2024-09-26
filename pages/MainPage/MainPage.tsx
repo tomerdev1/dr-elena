@@ -7,7 +7,8 @@ import Header from "../components/header/Header";
 import SecondIntro from "../components/secondIntro/secondIntro";
 import WhastsappButton from "../components/common/button/whatsapp/whatsappButton";
 import ContactUs from "../components/contactUs/contactUs";
-import Comments from "../components/comments/comments";
+import Comments from "../components/reviews/reviews";
+import Reviews from "../components/reviews/reviews";
 
 const MainPage: React.FC = () => {
   const { app, rtl } = styles;
@@ -19,7 +20,7 @@ const MainPage: React.FC = () => {
       <Intro />
       <SecondIntro />
       <Treatments />
-      <Comments placeId="ChIJmekoWiT7MAoRT_eGVoHhDBM" />
+      <Reviews />
       <ContactUs />
     </div>
   );

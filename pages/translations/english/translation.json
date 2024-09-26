@@ -62,6 +62,9 @@
       }
     ]
   },
+  "reviews": {
+    "text": "Word of Mouth"
+  },
   "contactUs": {
     "title": "Get In Touch",
     "review": {

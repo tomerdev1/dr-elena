@@ -62,6 +62,9 @@
       }
     ]
   },
+  "reviews": {
+    "text": "מפה לאוזן"
+  },
   "contactUs": {
     "title": "צור קשר",
     "review": {
