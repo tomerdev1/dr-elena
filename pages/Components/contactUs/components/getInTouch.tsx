@@ -29,7 +29,7 @@ const GetInTouch: React.FC = () => {
           className={cn(button, clickable)}
           size="small"
           type="link"
-          href="https://search.google.com/local/writereview?placeid=ChIJrRkl1oazAhURANu_nIoUn5I"
+          href="https://www.facebook.com/profile.php?id=61551627340036&sk=reviews"
         >
           <IconWrapper icon={Rate} size={42} />
           <span>{t("contactUs.review.text")}</span>
@@ -67,7 +67,7 @@ const GetInTouch: React.FC = () => {
           className={cn(button, clickable)}
           size="small"
           type="link"
-          href="https://search.google.com/local/writereview?placeid=ChIJrRkl1oazAhURANu_nIoUn5I"
+          href="https://maps.app.goo.gl/jd23mKARWnwR5tTh9"
         >
           <IconWrapper icon={AddressIcon} size={42} />
           <span>{t("contactUs.address.text")}</span>
