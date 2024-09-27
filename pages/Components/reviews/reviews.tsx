@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import styles from "./reviews.module.scss";
+import { Carousel } from "antd";
+import CustomImage from "../common/image/customImage";
 
 type Review = {
   author_name: string;
@@ -9,10 +11,16 @@ type Review = {
 };
 
 const Reviews: React.FC = () => {
-  const { container } = styles;
+  const { container, title } = styles;
   const { t } = useTranslation();
 
-  return <div className={container}></div>;
+  return (
+    <div className={container}>
+      <span className={title}>{t("reviews.text")}</span>
+      <CustomImage />
+      <Carousel></Carousel>
+    </div>
+  );
 };
 
 export default Reviews;
