@@ -2,23 +2,77 @@ import { useTranslation } from "react-i18next";
 import styles from "./reviews.module.scss";
 import { Carousel } from "antd";
 import CustomImage from "../common/image/customImage";
-
-type Review = {
-  author_name: string;
-  rating: number;
-  text: string;
-  relative_time_description: string;
-};
+import Review from "./review";
+import useIsMobile from "@/pages/hooks/useIsMobile";
+import { useLanguageContext } from "@/pages/hooks/useLanguageContext";
+import { cn } from "@/lib/utils";
+import reviewsData from "./reviewsData.json";
+import { ReviewScore } from "./reviewStars";
 
 const Reviews: React.FC = () => {
-  const { container, title } = styles;
+  const {
+    container,
+    title,
+    colorsContainer,
+    firstColor,
+    secondColor,
+    content,
+    carousel,
+    rootCousel,
+    image,
+    imageRtl,
+    imageLtr,
+    contentRtl,
+    contentLtr,
+    customDots,
+  } = styles;
   const { t } = useTranslation();
+  const isMobile = useIsMobile();
+  const { language } = useLanguageContext();
 
   return (
     <div className={container}>
-      <span className={title}>{t("reviews.text")}</span>
-      <CustomImage />
-      <Carousel></Carousel>
+      <div className={colorsContainer}>
+        <div className={firstColor}>
+          <CustomImage
+            src={"/assets/images/happyGirl2.png"}
+            className={cn(language == "hebrew" ? imageRtl : imageLtr, image)}
+            width={0}
+            height={isMobile ? 180 : 460}
+            style={{
+              width: "auto",
+            }}
+          />
+        </div>
+
+        <div className={secondColor}>
+          <span className={title}>{t("reviews.title")}</span>
+          <div
+            className={cn(
+              content,
+              language == "hebrew" ? contentRtl : contentLtr
+            )}
+          >
+            <Carousel
+              autoplay
+              autoplaySpeed={5000}
+              dots={{ className: customDots }}
+              arrows
+              rootClassName={rootCousel}
+              className={carousel}
+            >
+              {reviewsData.map((reviewData) => (
+                <Review
+                  text={reviewData.text}
+                  score={reviewData.score as ReviewScore}
+                  key={reviewData.text}
+                  lng={reviewData.lng}
+                />
+              ))}
+            </Carousel>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,42 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  color: $background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .bubble {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    max-width: 70%;
+    align-items: center;
+    margin: 0 0 20px 0;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    position: relative;
+    padding: 1rem;
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.15);
+    .bubbleContent {
+      display: ruby;
+    }
+    .quote {
+      display: flex;
+      align-self: flex-start;
+    }
+  }
+
+  .bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white;
+  }
+}

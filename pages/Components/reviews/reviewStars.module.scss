@@ -1,0 +1,19 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  display: flex;
+  gap: 8px;
+  width: fit-content;
+  flex-direction: row;
+  .star {
+    fill: $background-dd;
+  }
+  .checked {
+    fill: orange;
+  }
+  .half {
+    fill: orange;
+    position: relative;
+    clip-path: inset(0 50% 0 0); /* Only show the left half of the star */
+  }
+}
