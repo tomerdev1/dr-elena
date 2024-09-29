@@ -1,0 +1,105 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  height: 26rem;
+  position: relative;
+  margin: 2rem 0;
+  background-color: transparent;
+
+  .colorsContainer {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    bottom: 0;
+    .firstColor {
+      background-color: $primary-l;
+      flex: 1;
+      .image {
+        position: absolute;
+        top: 31%;
+        transform: translate(-50%, -50%);
+        display: block;
+      }
+      .imageRtl {
+        left: 67%;
+      }
+      .imageLtr {
+        left: 32%;
+      }
+    }
+    .secondColor {
+      background-color: $text-primary;
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 66%;
+      .title {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        color: $background;
+        font-size: x-large;
+        font-weight: 200;
+        justify-content: center;
+      }
+      .content {
+        flex: 4;
+        .rootCousel {
+          height: 100%;
+
+          .carousel {
+            display: flex;
+            height: 90%;
+            align-items: center;
+            button {
+              color: $primary;
+            }
+            .customDots {
+              [class="slick-active"] {
+                button {
+                  // background-color: $background;
+                  background-color: $primary;
+                }
+              }
+              button {
+                // background-color: $primary;
+                background-color: $primary-l;
+              }
+            }
+          }
+        }
+      }
+      .content.contentRtl {
+        margin: 0rem 16rem 1rem 4rem;
+      }
+      .content.contentLtr {
+        margin: 0rem 4rem 1rem 16rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    top: unset !important;
+    bottom: 0 !important;
+    left: unset !important;
+    transform: unset !important;
+  }
+  .colorsContainer {
+    flex-direction: column-reverse !important;
+    height: 100% !important;
+    .secondColor {
+      max-width: unset !important;
+
+      .content {
+        margin: unset !important;
+        .rootCousel {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

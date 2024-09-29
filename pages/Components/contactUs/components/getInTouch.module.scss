@@ -15,7 +15,7 @@
     position: relative;
     margin-bottom: 1rem;
     .item {
-      background-color: $primary-ll;
+      background-color: white;
       display: flex;
       font-size: large;
       flex-direction: column;
@@ -47,7 +47,7 @@
 
     .circle {
       position: absolute;
-      background-color: $primary-ll;
+      background-color: white;
       width: 70px;
       height: 60px;
       border-radius: 9999px;
