@@ -3,6 +3,8 @@
 
 .app {
   position: relative;
+  display: flex;
+  flex-direction: column;
   h1 {
     font-family: "Lora", serif;
   }

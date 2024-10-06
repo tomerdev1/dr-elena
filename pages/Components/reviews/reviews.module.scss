@@ -3,9 +3,8 @@
 .container {
   height: 26rem;
   position: relative;
-  margin: 2rem 0;
   background-color: transparent;
-
+  padding-top: $default-padding;
   .colorsContainer {
     position: absolute;
     width: 100%;
@@ -82,6 +81,9 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    margin-top: $default-padding;
+  }
   .image {
     top: unset !important;
     bottom: 0 !important;

@@ -9,6 +9,7 @@ import WhastsappButton from "../components/common/button/whatsapp/whatsappButton
 import ContactUs from "../components/contactUs/contactUs";
 import Comments from "../components/reviews/reviews";
 import Reviews from "../components/reviews/reviews";
+import Credits from "../components/credits/credits";
 
 const MainPage: React.FC = () => {
   const { app, rtl } = styles;
@@ -22,6 +23,7 @@ const MainPage: React.FC = () => {
       <Treatments />
       <Reviews />
       <ContactUs />
+      <Credits />
     </div>
   );
 };

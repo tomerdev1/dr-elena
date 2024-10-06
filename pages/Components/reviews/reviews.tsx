@@ -38,7 +38,7 @@ const Reviews: React.FC = () => {
             src={"/assets/images/happyGirl2.png"}
             className={cn(language == "hebrew" ? imageRtl : imageLtr, image)}
             width={0}
-            height={isMobile ? 180 : 460}
+            height={isMobile ? 190 : 460}
             style={{
               width: "auto",
             }}
