@@ -35,7 +35,7 @@ const Reviews: React.FC = () => {
       <div className={colorsContainer}>
         <div className={firstColor}>
           <CustomImage
-            src={"/assets/images/happyGirl2.png"}
+            src={"/assets/images/happyGirl.png"}
             className={cn(language == "hebrew" ? imageRtl : imageLtr, image)}
             width={0}
             height={isMobile ? 190 : 460}

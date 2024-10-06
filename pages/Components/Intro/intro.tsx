@@ -18,7 +18,7 @@ const Intro: React.FC = () => {
     <div className={introContainer}>
       <div className={coverContainer}>
         <CustomImage
-          src={"/assets/images/cover6.jpg"}
+          src={"/assets/images/cover.jpg"}
           width={0}
           height={0}
           style={{
