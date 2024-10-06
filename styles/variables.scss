@@ -7,9 +7,11 @@ $primary-ll: #ebf2f9;
 $background: #325c8f;
 $background-d: #223e5f;
 $background-dd: #1d3552;
+$gray: #f3f5f8;
 $black: #111f30;
 $text-primary: #f1f5fa;
 $default-padding: 2rem;
+$default-line-height: 350%;
 
 @mixin background-opacity($color, $opacity: 0.3) {
   background: $color; /* The Fallback */
