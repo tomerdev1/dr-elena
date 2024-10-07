@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      <title>Dr. Skliaruk</title>
+      <title>Dr. Elena Skliaruk</title>
       <Head />
       <link rel="icon" href="/assets/images/logo.png" />
       <body style={{ margin: 0 }}>

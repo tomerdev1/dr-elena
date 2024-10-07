@@ -11,15 +11,8 @@ import SocialNetworks from "../../socialNetworks/socialNetworks";
 import useIsMobile from "@/pages/hooks/useIsMobile";
 
 const GetInTouch: React.FC = () => {
-  const {
-    getInTouchContainer,
-    title,
-    content,
-    item,
-    button,
-    circle,
-    clickable,
-  } = styles;
+  const { getInTouchContainer, content, item, button, circle, clickable } =
+    styles;
   const { t } = useTranslation();
   const isMobile = useIsMobile();
   const ReviewUs = () => {

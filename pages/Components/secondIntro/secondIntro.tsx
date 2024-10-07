@@ -7,6 +7,8 @@ import Professional from "@/public/assets/icons/secondIntro/professional";
 import Clock from "@/public/assets/icons/secondIntro/clock";
 import Science from "@/public/assets/icons/secondIntro/science";
 import Checklist from "@/public/assets/icons/secondIntro/checklist";
+import { cn } from "@/lib/utils";
+import { useLanguageContext } from "@/pages/hooks/useLanguageContext";
 
 interface SecondIntroItem {
   text: string;
@@ -21,8 +23,11 @@ const SecondIntro: React.FC = () => {
     titleContainer,
     marker,
     firstPartContainer,
+    firstPartContainerRU,
   } = styles;
   const { t } = useTranslation();
+  const { language } = useLanguageContext();
+
   const items = t("secondIntro.items", {
     returnObjects: true,
   }) as SecondIntroItem[];
@@ -47,7 +52,12 @@ const SecondIntro: React.FC = () => {
   return (
     <div className={secondIntro}>
       <div className={titleContainer}>
-        <div className={firstPartContainer}>
+        <div
+          className={cn(
+            firstPartContainer,
+            language == "russian" ? firstPartContainerRU : ""
+          )}
+        >
           <span className={title}>{t("secondIntro.title.firstText")}</span>
           <mark className={marker}>{t("secondIntro.title.marked")}</mark>
         </div>

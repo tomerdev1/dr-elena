@@ -19,14 +19,18 @@
         color: $text-primary;
         text-align: center;
         display: flex;
-        width: 500px;
+        width: 640px;
         flex-direction: column;
         .titleText {
-          font-size: 40px;
+          font-size: 42px;
           font-weight: 700;
+          margin: 0px;
           letter-spacing: 4px;
         }
         .subtitleText {
+          font-size: 32px;
+        }
+        .bodyText {
           font-size: x-large;
           line-height: 125%;
           letter-spacing: 2px;
@@ -41,8 +45,8 @@
     height: 90vh;
     .coverContent {
       flex-direction: column;
-      width: 80% !important;
-      .subtitleText {
+      width: 92% !important;
+      .bodyText {
         font-size: large !important;
       }
     }

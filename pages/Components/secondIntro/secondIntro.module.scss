@@ -61,6 +61,10 @@
   .secondIntroItems {
     grid-template-columns: 1fr !important;
   }
+  .firstPartContainerRU {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
 }
 
 @keyframes highlight {

@@ -5,7 +5,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   .bubble {
     display: flex;
     flex-direction: row;
@@ -28,7 +27,6 @@
       align-self: flex-start;
     }
   }
-
   .bubble::after {
     content: "";
     position: absolute;
@@ -44,7 +42,7 @@
 
 @media (max-width: 768px) {
   .bubble {
-    font-size: 8px !important;
+    font-size: 10px !important;
   }
   .bubbleRU {
     font-size: 14px !important;
