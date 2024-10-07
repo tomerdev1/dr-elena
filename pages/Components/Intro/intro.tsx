@@ -11,6 +11,7 @@ const Intro: React.FC = () => {
     titleText,
     coverGradient,
     subtitleText,
+    bodyText,
   } = styles;
   const { t } = useTranslation();
   const isMobile = useIsMobile();
@@ -31,7 +32,8 @@ const Intro: React.FC = () => {
         <div className={coverGradient}>
           <div className={coverContent}>
             <h1 className={titleText}>{t("intro.name")}</h1>
-            <span className={subtitleText}>{t("intro.a")}</span>
+            <h1 className={subtitleText}>{t("intro.subtitle")}</h1>
+            <span className={bodyText}>{t("intro.a")}</span>
           </div>
         </div>
       </div>

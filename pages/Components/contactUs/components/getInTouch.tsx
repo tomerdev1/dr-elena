@@ -11,15 +11,8 @@ import SocialNetworks from "../../socialNetworks/socialNetworks";
 import useIsMobile from "@/pages/hooks/useIsMobile";
 
 const GetInTouch: React.FC = () => {
-  const {
-    getInTouchContainer,
-    title,
-    content,
-    item,
-    button,
-    circle,
-    clickable,
-  } = styles;
+  const { getInTouchContainer, content, item, button, circle, clickable } =
+    styles;
   const { t } = useTranslation();
   const isMobile = useIsMobile();
   const ReviewUs = () => {
@@ -44,7 +37,7 @@ const GetInTouch: React.FC = () => {
           className={cn(button, clickable)}
           size="small"
           type="link"
-          href="tel:+972000000000"
+          href="tel:+972535518727"
         >
           <IconWrapper icon={Phone} size={42} />
           <span>053-551-8727</span>

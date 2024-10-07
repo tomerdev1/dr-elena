@@ -10,7 +10,7 @@ const WhastsappButton: React.FC = () => {
 
   const { t } = useTranslation();
 
-  const data = { phoneNumber: "+972523941417", message: t("whatsappMessage") };
+  const data = { phoneNumber: "+972535518727", message: t("whatsappMessage") };
 
   const isMobile = useIsMobile();
   const getWhatsAppLink = (): string => {
