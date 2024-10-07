@@ -12,14 +12,15 @@ type Props = {
 };
 
 const Review: React.FC<Props> = ({ score, text, lng }) => {
-  const { container, bubble, quote, bubbleContent, starRating } = styles;
+  const { container, bubble, bubbleRU, quote, bubbleContent, starRating } =
+    styles;
   const CSS = {
     quoteColor: variables["primary-l"],
   };
   return (
     <div className={container}>
       {
-        <div className={bubble}>
+        <div className={cn(bubble, lng == "ru" ? bubbleRU : "")}>
           <div className={quote}>
             <IconWrapper fillColor={CSS.quoteColor} icon={Quote} size={24} />
           </div>

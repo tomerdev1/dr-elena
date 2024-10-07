@@ -1,6 +1,6 @@
 {
   "intro": {
-    "name": "Dr. Skliarok Clinic",
+    "name": "Dr. Skliaruk Clinic",
     "a": "You're smile It's the first thing people notice, that's why your smile is our business card."
   },
   "whatsappMessage": "Hello, I would like to make an appointment.",
@@ -77,7 +77,7 @@
     },
     "workingHours": {
       "id": 2,
-      "text":  "Sun-Thu \n9:00-17:00"
+      "text":  "Sun-Thu 8:00-20:00 \n Fri 8:00-14:00"
     }
   },
   "socialNetworks": {

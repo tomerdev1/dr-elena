@@ -5,13 +5,18 @@
     "lng": "he"
   },
   {
-    "text": "Dr. Skliarok is the best dentist I have ever been to! The clinic is clean, and the staff is incredibly friendly. Highly recommend!",
+    "text": "Dr. Skliaruk is the best dentist I have ever been to! The clinic is clean, and the staff is incredibly friendly. Highly recommend!",
     "score": 5,
     "lng": "en"
   },
   {
-    "text": "I’ve always had a fear of the dentist, but Dr. Skliarok and her team made me feel comfortable and at ease. Great experience overall.",
-    "score": 4.5,
+    "text": "Хорошее заботливое обслуживание.",
+    "score": 5,
+    "lng": "ru"
+  },
+  {
+    "text": "I’ve always had a fear of the dentist, but Dr. Skliaruk and her team made me feel comfortable and at ease. Great experience overall.",
+    "score": 5,
     "lng": "en"
   },
   {
@@ -20,8 +25,13 @@
     "lng": "he"
   },
   {
-    "text": "Dr. Skliarok’ clinic is amazing! They take care of every detail, and I never felt any pain during my procedures.",
-    "score": 4.5,
+    "text": "Очень благодарна доктору, помогла решить серьезные проблемы.",
+    "score": 5,
+    "lng": "ru"
+  },
+  {
+    "text": "Dr. Skliaruk’ clinic is amazing! They take care of every detail, and I never felt any pain during my procedures.",
+    "score": 5,
     "lng": "en"
   },
   {
@@ -30,9 +40,14 @@
     "lng": "he"
   },
   {
-    "text": "My family and I have been coming to Dr. Skliarok for years, and we are always satisfied with the results. Great service and professional staff!",
-    "score": 5.0,
+    "text": "My family and I have been coming to Dr. Skliaruk for years, and we are always satisfied with the results. Great service and professional staff!",
+    "score": 5,
     "lng": "en"
+  },
+  {
+    "text": "Отличная команда, спасибо огромное.",
+    "score": 5,
+    "lng": "ru"
   },
   {
     "text": "לא הייתי אצל רופא שיניים במשך שנים עד שהמליצו לי על ד״ר סקליארוק. חווית הטיפול הייתה מעולה ואני בהחלט אחזור אליהם.",
@@ -45,8 +60,13 @@
     "lng": "en"
   },
   {
-    "text": "הגעתי למרפאה עם חששות, אך בזכות המקצועיות והסבלנות של הצוות כל החששות התפוגגו. מרפאה ברמה גבוהה!",
+    "text": "הגעתי למרפאה עם חרדה דנטלית, אך בזכות המקצועיות והסבלנות של הצוות כל החרדות התפוגגו. מרפאה ברמה גבוהה!",
     "score": 5,
     "lng": "he"
+  },
+  {
+    "text": "Большие специалисты своего дела.",
+    "score": 5,
+    "lng": "ru"
   }
 ]

@@ -44,7 +44,7 @@ const GetInTouch: React.FC = () => {
           className={cn(button, clickable)}
           size="small"
           type="link"
-          href="tel:+972000000000"
+          href="tel:+972535518727"
         >
           <IconWrapper icon={Phone} size={42} />
           <span>053-551-8727</span>
