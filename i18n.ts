@@ -21,13 +21,13 @@ i18n
   .use(initReactI18next)
   .use(I18nextBrowserLanguageDetector)
   .init({
-    supportedLngs: ["en", "he", "ru"],
+    supportedLngs: ["he", "en", "ru"],
+    fallbackLng: "he",
     resources,
     debug: true,
     interpolation: {
       escapeValue: false, // React already escapes values
     },
-
     detection: {
       order: ["localStorage", "navigator"],
       caches: ["localStorage"],

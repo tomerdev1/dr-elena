@@ -1,7 +1,6 @@
 "use-client";
 import styles from "./MainPage.module.scss";
 import { cn } from "@/lib/utils";
-import Header from "../components/common/header/header";
 import WhastsappButton from "../components/common/button/whatsapp/whatsappButton";
 import Intro from "../components/intro/intro";
 import SecondIntro from "../components/secondIntro/secondIntro";
@@ -11,6 +10,7 @@ import ContactUs from "../components/contactUs/contactUs";
 import Credits from "../components/credits/credits";
 import { useTranslation } from "react-i18next";
 import React from "react";
+import Header from "../components/header/header";
 
 const MainPage: React.FC = () => {
   const { app, rtl } = styles;
