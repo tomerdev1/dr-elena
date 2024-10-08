@@ -1,4 +1,4 @@
-import MainPage from "./mainPage/MainPage";
+import MainPage from "@/pages/MainPage/MainPage";
 import i18next from "@/i18n";
 import { I18nextProvider } from "react-i18next";
 

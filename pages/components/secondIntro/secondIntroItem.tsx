@@ -1,7 +1,7 @@
-import IconWrapper from "@/pages/components2/common/icon/icon";
 import styles from "./secondIntroItem.module.scss";
 import variables from "@/styles/style.module.scss";
 import { Icons } from "@/public/assets/icons/icons";
+import IconWrapper from "../common/icon/icon";
 
 interface Props {
   text: string;
