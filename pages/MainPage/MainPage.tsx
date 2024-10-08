@@ -1,21 +1,34 @@
-import { cn } from "@/lib/utils";
+"use-client";
 import styles from "./MainPage.module.scss";
-import { useLanguageContext } from "../hooks/useLanguageContext";
-import Intro from "../components/intro/intro";
-import Treatments from "../components/treatmets/treatments";
-import Header from "../components/header/Header";
-import SecondIntro from "../components/secondIntro/secondIntro";
+import { cn } from "@/lib/utils";
+import Header from "../components/header/header";
 import WhastsappButton from "../components/common/button/whatsapp/whatsappButton";
-import ContactUs from "../components/contactUs/contactUs";
-import Comments from "../components/reviews/reviews";
+import Intro from "../components/intro/intro";
+import SecondIntro from "../components/secondIntro/secondIntro";
+import Treatments from "../components/treatmets/treatments";
 import Reviews from "../components/reviews/reviews";
+import ContactUs from "../components/contactUs/contactUs";
 import Credits from "../components/credits/credits";
+import { useTranslation } from "react-i18next";
+import React from "react";
 
 const MainPage: React.FC = () => {
   const { app, rtl } = styles;
-  const { language } = useLanguageContext();
+
+  const { i18n } = useTranslation();
+
+  const [isClient, setIsClient] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsClient(true); // Ensures the component renders only on the client side
+  }, []);
+
+  if (!isClient) {
+    return null; // Prevent SSR of this component
+  }
+
   return (
-    <div className={cn(app, language == "hebrew" && rtl)}>
+    <div className={cn(app, i18n.language == "he" && rtl)}>
       <Header />
       <WhastsappButton />
       <Intro />

@@ -1,9 +1,9 @@
 import Image from "next/image";
-import styles from "./Header.module.scss";
-import { useLanguageContext } from "@/pages/hooks/useLanguageContext";
-import CustomSelect from "../common/select/customSelect";
-import { useTranslation } from "react-i18next";
+import styles from "./header.module.scss";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+import CustomSelect from "../common/select/customSelect";
+
 const Header: React.FC = () => {
   const {
     logoContainer,
@@ -11,39 +11,38 @@ const Header: React.FC = () => {
     headerContainerMobile,
     selectContainer,
   } = styles;
-  const { language, setLanguage } = useLanguageContext();
   const { i18n } = useTranslation();
+
+  const changeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
+  };
+
   const options = [
     {
       label: "עברית",
-      value: "hebrew",
+      value: "he",
       emoji: "🇮🇱",
     },
     {
       label: "English",
-      value: "english",
+      value: "en",
       emoji: "🇺🇸",
     },
     {
       label: "русский",
-      value: "russian",
+      value: "ru",
       emoji: "🇷🇺",
     },
   ];
-
-  const handleChange = (value: string) => {
-    setLanguage(value);
-    i18n.changeLanguage(value);
-  };
 
   return (
     <div className={cn(headerContainer, headerContainerMobile)}>
       <div className={selectContainer}>
         <CustomSelect
           options={options}
-          defaultValue={language}
-          placeholder={language}
-          onChange={handleChange}
+          defaultValue={i18n.language}
+          placeholder={i18n.language}
+          onChange={changeLanguage}
         />
       </div>
       <div className={logoContainer}>

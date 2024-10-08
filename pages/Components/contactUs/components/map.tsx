@@ -1,4 +1,4 @@
-import useIsMobile from "@/pages/hooks/useIsMobile";
+import useIsMobile from "@/hooks/useIsMobile";
 import styles from "./map.module.scss";
 
 const Map: React.FC = () => {

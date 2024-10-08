@@ -3,7 +3,7 @@ import GetInTouch from "./components/getInTouch";
 import Map from "./components/map";
 import styles from "./contactUs.module.scss";
 import SocialNetworks from "../socialNetworks/socialNetworks";
-import useIsMobile from "@/pages/hooks/useIsMobile";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const ContactUs: React.FC = () => {
   const { contactUsContainer, title, content } = styles;

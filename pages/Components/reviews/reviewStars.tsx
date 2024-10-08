@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import styles from "./reviewStars.module.scss";
 import IconWrapper from "../common/icon/icon";
 import Star from "@/public/assets/icons/reviews/star";
+import { Icons } from "@/public/assets/icons/icons";
 
 export type ReviewScore = 1 | 2 | 3 | 4 | 4.5 | 5;
 
@@ -16,7 +17,7 @@ const ReviewStars: React.FC<Props> = ({ score, classname }) => {
     <div className={cn(container, classname)}>
       {score >= 1 && (
         <IconWrapper
-          icon={Star}
+          icon={Icons.star}
           size={14}
           className={cn(star, score >= 1 ? checked : undefined)}
           fillColor={""}
@@ -24,7 +25,7 @@ const ReviewStars: React.FC<Props> = ({ score, classname }) => {
       )}
       {score >= 2 && (
         <IconWrapper
-          icon={Star}
+          icon={Icons.star}
           size={14}
           fillColor={""}
           className={cn(star, score >= 2 ? checked : undefined)}
@@ -32,7 +33,7 @@ const ReviewStars: React.FC<Props> = ({ score, classname }) => {
       )}
       {score >= 3 && (
         <IconWrapper
-          icon={Star}
+          icon={Icons.star}
           size={14}
           fillColor={""}
           className={cn(star, score >= 3 ? checked : undefined)}
@@ -40,7 +41,7 @@ const ReviewStars: React.FC<Props> = ({ score, classname }) => {
       )}
       {score >= 4 && (
         <IconWrapper
-          icon={Star}
+          icon={Icons.star}
           size={14}
           fillColor={""}
           className={cn(star, score >= 4 ? checked : undefined)}
@@ -48,7 +49,7 @@ const ReviewStars: React.FC<Props> = ({ score, classname }) => {
       )}
       {score >= 4.5 && (
         <IconWrapper
-          icon={Star}
+          icon={Icons.star}
           size={14}
           fillColor=""
           className={cn(

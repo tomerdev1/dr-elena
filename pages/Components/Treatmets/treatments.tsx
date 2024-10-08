@@ -6,6 +6,8 @@ import Aesthetics from "@/public/assets/icons/treatments/aesthetics";
 import Implants2 from "@/public/assets/icons/treatments/implants2";
 import Rehabilitation2 from "@/public/assets/icons/treatments/rehabilitation2";
 import Maintenance from "@/public/assets/icons/treatments/maintenance";
+import { Icons } from "@/public/assets/icons/icons";
+import { LucideProps } from "lucide-react";
 
 interface TreatmentItem {
   title: string;
@@ -27,33 +29,14 @@ const Treatments: React.FC = () => {
     returnObjects: true,
   }) as TreatmentItem[];
 
-  const getIcon = (id: number): FC<SVGProps<SVGSVGElement>> => {
-    switch (id) {
-      case 0:
-        return Implants2;
-      case 1:
-        return Rehabilitation2;
-      case 2:
-        return Aesthetics;
-      case 3:
-        return Maintenance;
-      default:
-        return Maintenance;
-    }
-  };
-
   return (
     <div className={treatmentsContainer}>
       <span className={treatmentsTitle}>{t("treatments.title")}</span>
       <div className={treatments}>
-        {items.map((item) => (
-          <Treatment
-            icon={getIcon(item.id)}
-            key={item.title}
-            title={item.title}
-            body={item.body}
-          />
-        ))}
+        {Array.isArray(items) &&
+          items.map((item) => (
+            <Treatment key={item.title} title={item.title} body={item.body} />
+          ))}
       </div>
     </div>
   );

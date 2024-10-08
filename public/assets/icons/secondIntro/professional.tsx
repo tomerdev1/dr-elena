@@ -1,5 +1,6 @@
 import * as React from "react";
-const Professional = (props: React.SVGProps<SVGSVGElement>) => (
+import { LucideProps } from "lucide-react";
+const Professional = ({ ...props }: LucideProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"

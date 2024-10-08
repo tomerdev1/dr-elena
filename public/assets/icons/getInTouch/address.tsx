@@ -1,5 +1,6 @@
 import * as React from "react";
-const AddressIcon = (props: React.SVGProps<SVGSVGElement>) => (
+import { LucideProps } from "lucide-react";
+const AddressIcon = ({ ...props }: LucideProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={"100%"}
