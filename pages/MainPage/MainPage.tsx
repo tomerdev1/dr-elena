@@ -1,5 +1,4 @@
 "use-client";
-import i18n from "@/i18n";
 import styles from "./MainPage.module.scss";
 import { cn } from "@/lib/utils";
 import Header from "../components/header/header";
@@ -10,18 +9,31 @@ import Treatments from "../components/treatmets/treatments";
 import Reviews from "../components/reviews/reviews";
 import ContactUs from "../components/contactUs/contactUs";
 import Credits from "../components/credits/credits";
+import { useTranslation } from "react-i18next";
+import React from "react";
 
 const MainPage: React.FC = () => {
   const { app, rtl } = styles;
-  const direction = i18n.dir();
+
+  const { i18n } = useTranslation();
+
+  const [isClient, setIsClient] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsClient(true); // Ensures the component renders only on the client side
+  }, []);
+
+  if (!isClient) {
+    return null; // Prevent SSR of this component
+  }
 
   return (
-    <div className={cn(app, direction == "rtl" && rtl)}>
+    <div className={cn(app, i18n.language == "he" && rtl)}>
       <Header />
       <WhastsappButton />
       <Intro />
       <SecondIntro />
-      {/* <Treatments /> */}
+      <Treatments />
       <Reviews />
       <ContactUs />
       <Credits />

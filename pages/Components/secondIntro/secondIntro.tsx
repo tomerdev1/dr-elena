@@ -1,13 +1,7 @@
 import { useTranslation } from "react-i18next";
 import styles from "./secondIntro.module.scss";
 import SecondIntroItem from "./secondIntroItem";
-import Calm from "@/public/assets/icons/secondIntro/calm";
-import Professional from "@/public/assets/icons/secondIntro/professional";
-import Clock from "@/public/assets/icons/secondIntro/clock";
-import Science from "@/public/assets/icons/secondIntro/science";
-import Checklist from "@/public/assets/icons/secondIntro/checklist";
 import { cn } from "@/lib/utils";
-import useLocalStorage from "@/hooks/useLocalStorage";
 
 interface SecondIntroItem {
   text: string;
@@ -24,8 +18,7 @@ const SecondIntro: React.FC = () => {
     firstPartContainer,
     firstPartContainerRU,
   } = styles;
-  const { t } = useTranslation();
-  const [language, setLanguage] = useLocalStorage("language", "he");
+  const { t, i18n } = useTranslation();
 
   const items = t("secondIntro.items", {
     returnObjects: true,
@@ -37,7 +30,7 @@ const SecondIntro: React.FC = () => {
         <div
           className={cn(
             firstPartContainer,
-            language == "ru" ? firstPartContainerRU : ""
+            i18n.language == "ru" ? firstPartContainerRU : ""
           )}
         >
           <span className={title}>{t("secondIntro.title.firstText")}</span>
