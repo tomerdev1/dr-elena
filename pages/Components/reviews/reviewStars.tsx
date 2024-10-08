@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import styles from "./reviewStars.module.scss";
-import IconWrapper from "@/pages/components/common/icon/icon";
 import { Icons } from "@/public/assets/icons/icons";
+import IconWrapper from "../common/icon/icon";
 
 export type ReviewScore = 1 | 2 | 3 | 4 | 4.5 | 5;
 
