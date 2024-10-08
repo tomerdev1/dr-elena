@@ -8,7 +8,7 @@ import Rate from "@/public/assets/icons/getInTouch/rate";
 import CustomButton from "../../common/button/customButton";
 import { cn } from "@/lib/utils";
 import SocialNetworks from "../../socialNetworks/socialNetworks";
-import useIsMobile from "@/pages/hooks/useIsMobile";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const GetInTouch: React.FC = () => {
   const { getInTouchContainer, content, item, button, circle, clickable } =

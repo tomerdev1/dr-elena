@@ -1,4 +1,4 @@
-import useIsMobile from "@/pages/hooks/useIsMobile";
+import useIsMobile from "@/hooks/useIsMobile";
 import { useTranslation } from "react-i18next";
 import styles from "./treatment.module.scss";
 import variables from "../../../styles/style.module.scss";

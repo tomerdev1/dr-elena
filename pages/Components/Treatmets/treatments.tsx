@@ -46,14 +46,15 @@ const Treatments: React.FC = () => {
     <div className={treatmentsContainer}>
       <span className={treatmentsTitle}>{t("treatments.title")}</span>
       <div className={treatments}>
-        {items.map((item) => (
-          <Treatment
-            icon={getIcon(item.id)}
-            key={item.title}
-            title={item.title}
-            body={item.body}
-          />
-        ))}
+        {Array.isArray(items) &&
+          items.map((item) => (
+            <Treatment
+              icon={getIcon(item.id)}
+              key={item.title}
+              title={item.title}
+              body={item.body}
+            />
+          ))}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import IconWrapper from "../common/icon/icon";
 import styles from "./secondIntroItem.module.scss";
 import variables from "../../../styles/style.module.scss";
 import { FC, SVGProps } from "react";
-import { useLanguageContext } from "@/pages/hooks/useLanguageContext";
+import useLocalStorage from "@/hooks/useLocalStorage";
 
 interface Props {
   text: string;
@@ -13,7 +13,7 @@ interface Props {
 const SecondIntroItem: React.FC<Props> = ({ text, icon, id }) => {
   const { secondIntroItem, secondIntroText, secondIntroIcon, experienceIcon } =
     styles;
-  const { language } = useLanguageContext();
+  const [language, setLanguage] = useLocalStorage("language", "he");
   const CSS = {
     primary: variables.primary,
   };

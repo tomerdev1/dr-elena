@@ -1,9 +1,10 @@
 import Image from "next/image";
-import styles from "./Header.module.scss";
-import { useLanguageContext } from "@/pages/hooks/useLanguageContext";
+import styles from "./header.module.scss";
 import CustomSelect from "../common/select/customSelect";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
+import useLocalStorage from "@/hooks/useLocalStorage";
+
 const Header: React.FC = () => {
   const {
     logoContainer,
@@ -11,22 +12,22 @@ const Header: React.FC = () => {
     headerContainerMobile,
     selectContainer,
   } = styles;
-  const { language, setLanguage } = useLanguageContext();
+  const [language, setLanguage] = useLocalStorage("language", "he");
   const { i18n } = useTranslation();
   const options = [
     {
       label: "עברית",
-      value: "hebrew",
+      value: "he",
       emoji: "🇮🇱",
     },
     {
       label: "English",
-      value: "english",
+      value: "en",
       emoji: "🇺🇸",
     },
     {
       label: "русский",
-      value: "russian",
+      value: "ru",
       emoji: "🇷🇺",
     },
   ];
@@ -39,12 +40,12 @@ const Header: React.FC = () => {
   return (
     <div className={cn(headerContainer, headerContainerMobile)}>
       <div className={selectContainer}>
-        <CustomSelect
+        {/* <CustomSelect
           options={options}
           defaultValue={language}
           placeholder={language}
           onChange={handleChange}
-        />
+        /> */}
       </div>
       <div className={logoContainer}>
         <Image

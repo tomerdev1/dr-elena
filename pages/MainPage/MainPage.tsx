@@ -1,26 +1,27 @@
-import { cn } from "@/lib/utils";
+"use-client";
+import i18n from "@/i18n";
 import styles from "./MainPage.module.scss";
-import { useLanguageContext } from "../hooks/useLanguageContext";
-import Intro from "../components/intro/intro";
-import Treatments from "../components/treatmets/treatments";
-import Header from "../components/header/Header";
-import SecondIntro from "../components/secondIntro/secondIntro";
+import { cn } from "@/lib/utils";
+import Header from "../components/header/header";
 import WhastsappButton from "../components/common/button/whatsapp/whatsappButton";
-import ContactUs from "../components/contactUs/contactUs";
-import Comments from "../components/reviews/reviews";
+import Intro from "../components/intro/intro";
+import SecondIntro from "../components/secondIntro/secondIntro";
+import Treatments from "../components/treatmets/treatments";
 import Reviews from "../components/reviews/reviews";
+import ContactUs from "../components/contactUs/contactUs";
 import Credits from "../components/credits/credits";
 
 const MainPage: React.FC = () => {
   const { app, rtl } = styles;
-  const { language } = useLanguageContext();
+  const direction = i18n.dir();
+
   return (
-    <div className={cn(app, language == "hebrew" && rtl)}>
+    <div className={cn(app, direction == "rtl" && rtl)}>
       <Header />
       <WhastsappButton />
       <Intro />
       <SecondIntro />
-      <Treatments />
+      {/* <Treatments /> */}
       <Reviews />
       <ContactUs />
       <Credits />

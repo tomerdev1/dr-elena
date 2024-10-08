@@ -19,7 +19,7 @@ const IconWrapper: React.FC<IconWrapperProps> = ({
       className={className}
       style={{ width: `${size}px`, height: `${size}px` }}
     >
-      <Icon fill={fillColor} width="100%" height="100%" />
+      {/* <Icon fill={fillColor} width="100%" height="100%" /> */}
     </div>
   );
 };

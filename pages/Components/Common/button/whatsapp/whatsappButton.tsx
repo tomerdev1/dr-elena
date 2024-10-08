@@ -3,7 +3,7 @@ import IconWrapper from "../../icon/icon";
 import CustomButton from "../customButton";
 import styles from "./whatsappButton.module.scss";
 import { useTranslation } from "react-i18next";
-import useIsMobile from "@/pages/hooks/useIsMobile";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const WhastsappButton: React.FC = () => {
   const { whatsappButton } = styles;

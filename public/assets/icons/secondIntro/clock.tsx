@@ -1,5 +1,5 @@
 import * as React from "react";
-const Clock = (props: React.SVGProps<SVGSVGElement>) => (
+const Clock = (props: React.SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="100%"

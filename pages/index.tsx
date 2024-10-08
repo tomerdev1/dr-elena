@@ -1,12 +1,12 @@
 import MainPage from "./mainPage/MainPage";
-import { LanguageProvider } from "./providers/languageProvider";
-import "./translations/i18n";
+import i18next from "@/i18n";
+import { I18nextProvider } from "react-i18next";
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
-    <LanguageProvider>
+    <I18nextProvider i18n={i18next}>
       <MainPage />
-    </LanguageProvider>
+    </I18nextProvider>
   );
 };
 

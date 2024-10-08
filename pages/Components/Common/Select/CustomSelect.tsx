@@ -1,5 +1,5 @@
 import { Select, SelectProps, Space } from "antd";
-import styles from "./CustomSelect.module.scss";
+import styles from "./customSelect.module.scss";
 
 interface Props extends SelectProps {}
 

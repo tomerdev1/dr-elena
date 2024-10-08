@@ -1,5 +1,5 @@
 import * as React from "react";
-const Star = (props: React.SVGProps<SVGSVGElement>) => (
+const Star = (props: React.SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"

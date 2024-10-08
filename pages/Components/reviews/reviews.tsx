@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 import styles from "./reviews.module.scss";
 import { Carousel } from "antd";
 import CustomImage from "../common/image/customImage";
+import i18n from "@/i18n";
 import Review from "./review";
-import useIsMobile from "@/pages/hooks/useIsMobile";
-import { useLanguageContext } from "@/pages/hooks/useLanguageContext";
+import useIsMobile from "@/hooks/useIsMobile";
 import { cn } from "@/lib/utils";
 import reviewsData from "./reviewsData.json";
 import { ReviewScore } from "./reviewStars";
@@ -28,7 +28,7 @@ const Reviews: React.FC = () => {
   } = styles;
   const { t } = useTranslation();
   const isMobile = useIsMobile();
-  const { language } = useLanguageContext();
+  const direction = i18n.dir();
 
   return (
     <div className={container}>
@@ -36,7 +36,7 @@ const Reviews: React.FC = () => {
         <div className={firstColor}>
           <CustomImage
             src={"/assets/images/happyGirl.png"}
-            className={cn(language == "hebrew" ? imageRtl : imageLtr, image)}
+            className={cn(direction == "rtl" ? imageRtl : imageLtr, image)}
             width={0}
             height={isMobile ? 190 : 460}
             style={{
@@ -50,7 +50,7 @@ const Reviews: React.FC = () => {
           <div
             className={cn(
               content,
-              language == "hebrew" ? contentRtl : contentLtr
+              direction == "rtl" ? contentRtl : contentLtr
             )}
           >
             <Carousel
@@ -61,14 +61,15 @@ const Reviews: React.FC = () => {
               rootClassName={rootCousel}
               className={carousel}
             >
-              {reviewsData.map((reviewData) => (
-                <Review
-                  text={reviewData.text}
-                  score={reviewData.score as ReviewScore}
-                  key={reviewData.text}
-                  lng={reviewData.lng}
-                />
-              ))}
+              {Array.isArray(reviewsData) &&
+                reviewsData.map((reviewData) => (
+                  <Review
+                    text={reviewData.text}
+                    score={reviewData.score as ReviewScore}
+                    key={reviewData.text}
+                    lng={reviewData.lng}
+                  />
+                ))}
             </Carousel>
           </div>
         </div>
