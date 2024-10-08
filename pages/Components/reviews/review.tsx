@@ -2,8 +2,8 @@ import styles from "./review.module.scss";
 import variables from "@/styles/style.module.scss";
 import ReviewStars, { ReviewScore } from "./reviewStars";
 import IconWrapper from "../common/icon/icon";
-import Quote from "@/public/assets/icons/reviews/quote";
 import { cn } from "@/lib/utils";
+import { Icons } from "@/public/assets/icons/icons";
 
 type Props = {
   text: string;
@@ -22,7 +22,11 @@ const Review: React.FC<Props> = ({ score, text, lng }) => {
       {
         <div className={cn(bubble, lng == "ru" ? bubbleRU : "")}>
           <div className={quote}>
-            <IconWrapper fillColor={CSS.quoteColor} icon={Quote} size={24} />
+            <IconWrapper
+              fillColor={CSS.quoteColor}
+              icon={Icons.quote}
+              size={24}
+            />
           </div>
           <div
             className={cn(bubbleContent)}

@@ -1,5 +1,6 @@
 import * as React from "react";
-const Star = (props: React.SVGProps<SVGSVGElement>): JSX.Element => (
+import { LucideProps } from "lucide-react";
+const Star = ({ ...props }: LucideProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"

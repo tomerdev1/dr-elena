@@ -1,9 +1,9 @@
-import Whastsapp from "@/public/assets/icons/socialMedia/whatsapp";
 import IconWrapper from "../../icon/icon";
 import CustomButton from "../customButton";
 import styles from "./whatsappButton.module.scss";
 import { useTranslation } from "react-i18next";
 import useIsMobile from "@/hooks/useIsMobile";
+import { Icons } from "@/public/assets/icons/icons";
 
 const WhastsappButton: React.FC = () => {
   const { whatsappButton } = styles;
@@ -32,7 +32,7 @@ const WhastsappButton: React.FC = () => {
       shape="circle"
       size="large"
       onClick={handleClick}
-      icon={<IconWrapper size={56} icon={Whastsapp} />}
+      icon={<IconWrapper size={56} icon={Icons.whastsapp} />}
     />
   );
 };

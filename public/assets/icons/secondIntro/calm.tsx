@@ -1,6 +1,7 @@
 import * as React from "react";
+import { LucideProps } from "lucide-react";
 
-const Calm = (props: React.SVGProps<SVGSVGElement>): JSX.Element => (
+const Calm = ({ ...props }: LucideProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={"100%"}

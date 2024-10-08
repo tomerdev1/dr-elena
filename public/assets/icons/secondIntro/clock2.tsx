@@ -1,5 +1,6 @@
 import * as React from "react";
-const Clock = (props: React.SVGProps<SVGSVGElement>): JSX.Element => (
+import { LucideProps } from "lucide-react";
+const Clock = ({ ...props }: LucideProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="100%"

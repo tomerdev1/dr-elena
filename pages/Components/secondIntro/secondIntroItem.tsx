@@ -1,28 +1,43 @@
 import IconWrapper from "../common/icon/icon";
 import styles from "./secondIntroItem.module.scss";
 import variables from "../../../styles/style.module.scss";
-import { FC, SVGProps } from "react";
-import useLocalStorage from "@/hooks/useLocalStorage";
+import { Icons } from "@/public/assets/icons/icons";
 
 interface Props {
   text: string;
-  icon: FC<SVGProps<SVGSVGElement>>;
   id: number;
 }
 
-const SecondIntroItem: React.FC<Props> = ({ text, icon, id }) => {
+const SecondIntroItem: React.FC<Props> = ({ text, id }) => {
   const { secondIntroItem, secondIntroText, secondIntroIcon, experienceIcon } =
     styles;
-  const [language, setLanguage] = useLocalStorage("language", "he");
   const CSS = {
     primary: variables.primary,
   };
+
+  const getIcon = (id: number) => {
+    switch (id) {
+      case 1:
+        return Icons.professional;
+      case 2:
+        return Icons.calm;
+      case 3:
+        return Icons.clock;
+      case 4:
+        return Icons.science;
+      case 5:
+        return Icons.checklist;
+      default:
+        return Icons.calm;
+    }
+  };
+
   return (
     <div className={secondIntroItem}>
       {id != 0 ? (
         <IconWrapper
           className={secondIntroIcon}
-          icon={icon}
+          icon={getIcon(id)}
           size={42}
           fillColor={CSS.primary}
         />

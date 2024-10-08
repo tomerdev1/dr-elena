@@ -31,23 +31,6 @@ const SecondIntro: React.FC = () => {
     returnObjects: true,
   }) as SecondIntroItem[];
 
-  const getIcon = (id: number): any => {
-    switch (id) {
-      case 1:
-        return Professional;
-      case 2:
-        return Calm;
-      case 3:
-        return Clock;
-      case 4:
-        return Science;
-      case 5:
-        return Checklist;
-      default:
-        return Calm;
-    }
-  };
-
   return (
     <div className={secondIntro}>
       <div className={titleContainer}>
@@ -66,12 +49,7 @@ const SecondIntro: React.FC = () => {
       <div className={secondIntroItems}>
         {Array.isArray(items) &&
           items.map((item) => (
-            <SecondIntroItem
-              text={item.text}
-              icon={getIcon(item.id)}
-              key={item.id}
-              id={item.id}
-            />
+            <SecondIntroItem text={item.text} key={item.id} id={item.id} />
           ))}
       </div>
     </div>
