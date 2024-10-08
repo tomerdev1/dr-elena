@@ -1,9 +1,9 @@
-import IconWrapper from "@/pages/components/common/icon/icon";
 import CustomButton from "@/pages/components/common/button/customButton";
 import styles from "./whatsappButton.module.scss";
 import { useTranslation } from "react-i18next";
 import useIsMobile from "@/hooks/useIsMobile";
 import { Icons } from "@/public/assets/icons/icons";
+import IconWrapper from "../../icon/icon";
 
 const WhastsappButton: React.FC = () => {
   const { whatsappButton } = styles;
