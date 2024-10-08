@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./header.module.scss";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
-import CustomSelect from "../common/select/customSelect";
+import CustomSelect from "../common/select/CustomSelect";
 
 const Header: React.FC = () => {
   const {

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import styles from "./socialNetworks.module.scss";
-import CustomButton from "@/pages/components/common/button/customButton";
-import IconWrapper from "@/pages/components/common/icon/icon";
+import CustomButton from "@/pages/components2/common/button/customButton";
+import IconWrapper from "@/pages/components2/common/icon/icon";
 import { Icons } from "@/public/assets/icons/icons";
 
 const SocialNetworks: React.FC = () => {

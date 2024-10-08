@@ -7,7 +7,7 @@ import useIsMobile from "@/hooks/useIsMobile";
 import { cn } from "@/lib/utils";
 import reviewsData from "./reviewsData.json";
 import { ReviewScore } from "./reviewStars";
-import CustomImage from "../common/image/customImage";
+import CustomImage from "../common/image/CustomImage";
 
 const Reviews: React.FC = () => {
   const {
