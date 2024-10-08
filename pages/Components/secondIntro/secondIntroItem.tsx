@@ -1,6 +1,6 @@
-import IconWrapper from "../common/icon/icon";
+import IconWrapper from "@/pages/components/common/icon/icon";
 import styles from "./secondIntroItem.module.scss";
-import variables from "../../../styles/style.module.scss";
+import variables from "@/styles/style.module.scss";
 import { Icons } from "@/public/assets/icons/icons";
 
 interface Props {

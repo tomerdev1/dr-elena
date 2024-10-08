@@ -1,4 +1,4 @@
-import CustomButton from "../common/button/customButton";
+import CustomButton from "@/pages/components/common/button/customButton";
 import style from "./credits.module.scss";
 
 const Credits: React.FC = () => {

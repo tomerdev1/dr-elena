@@ -1,7 +1,7 @@
 import styles from "./review.module.scss";
 import variables from "@/styles/style.module.scss";
 import ReviewStars, { ReviewScore } from "./reviewStars";
-import IconWrapper from "../common/icon/icon";
+import IconWrapper from "@/pages/components/common/icon/icon";
 import { cn } from "@/lib/utils";
 import { Icons } from "@/public/assets/icons/icons";
 

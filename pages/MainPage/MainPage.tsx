@@ -1,16 +1,16 @@
 "use-client";
 import styles from "./MainPage.module.scss";
 import { cn } from "@/lib/utils";
-import WhastsappButton from "../components/common/button/whatsapp/whatsappButton";
-import Intro from "../components/intro/intro";
-import SecondIntro from "../components/secondIntro/secondIntro";
-import Treatments from "../components/treatmets/treatments";
-import Reviews from "../components/reviews/reviews";
-import ContactUs from "../components/contactUs/contactUs";
-import Credits from "../components/credits/credits";
+import WhastsappButton from "@/pages/components/common/button/whatsapp/whatsappButton";
+import Intro from "@/pages/components/intro/intro";
+import SecondIntro from "@/pages/components/secondIntro/secondIntro";
+import Treatments from "@/pages/components/treatmets/treatments";
+import Reviews from "@/pages/components/reviews/reviews";
+import ContactUs from "@/pages/components/contactUs/contactUs";
+import Credits from "@/pages/components/credits/credits";
 import { useTranslation } from "react-i18next";
 import React from "react";
-import Header from "../components/header/header";
+import Header from "@/pages/components/header/header";
 
 const MainPage: React.FC = () => {
   const { app, rtl } = styles;

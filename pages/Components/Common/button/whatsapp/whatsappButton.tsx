@@ -1,5 +1,5 @@
-import IconWrapper from "../../icon/icon";
-import CustomButton from "../customButton";
+import IconWrapper from "@/pages/components/common/icon/icon";
+import CustomButton from "@/pages/components/common/button/customButton";
 import styles from "./whatsappButton.module.scss";
 import { useTranslation } from "react-i18next";
 import useIsMobile from "@/hooks/useIsMobile";

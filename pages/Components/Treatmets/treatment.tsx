@@ -1,11 +1,8 @@
 import useIsMobile from "@/hooks/useIsMobile";
 import { useTranslation } from "react-i18next";
 import styles from "./treatment.module.scss";
-import variables from "../../../styles/style.module.scss";
-import IconWrapper from "../common/icon/icon";
-
-import { FC, SVGProps } from "react";
-import { LucideProps } from "lucide-react";
+import variables from "@/styles/style.module.scss";
+import IconWrapper from "@/pages/components/common/icon/icon";
 import { Icons } from "@/public/assets/icons/icons";
 
 interface Props {

@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import styles from "./getInTouch.module.scss";
-import IconWrapper from "../../common/icon/icon";
-import CustomButton from "../../common/button/customButton";
+import IconWrapper from "@/pages/components/common/icon/icon";
+import CustomButton from "@/pages/components/common/button/customButton";
 import { cn } from "@/lib/utils";
-import SocialNetworks from "../../socialNetworks/socialNetworks";
+import SocialNetworks from "@/pages/components/socialNetworks/socialNetworks";
 import useIsMobile from "@/hooks/useIsMobile";
 import { Icons } from "@/public/assets/icons/icons";
 
