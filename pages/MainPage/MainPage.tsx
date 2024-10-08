@@ -1,7 +1,7 @@
 "use-client";
 import styles from "./MainPage.module.scss";
 import { cn } from "@/lib/utils";
-import Header from "../components/header/header";
+import Header from "../components/common/header/header";
 import WhastsappButton from "../components/common/button/whatsapp/whatsappButton";
 import Intro from "../components/intro/intro";
 import SecondIntro from "../components/secondIntro/secondIntro";
