@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
 import styles from "./getInTouch.module.scss";
-import IconWrapper from "../../common/icon/icon";
-import CustomButton from "../../common/button/customButton";
 import { cn } from "@/lib/utils";
-import SocialNetworks from "../../socialNetworks/socialNetworks";
 import useIsMobile from "@/hooks/useIsMobile";
 import { Icons } from "@/public/assets/icons/icons";
+import CustomButton from "../../common/button/customButton";
+import IconWrapper from "../../common/icon/icon";
+import SocialNetworks from "../../socialNetworks/socialNetworks";
 
 const GetInTouch: React.FC = () => {
   const { getInTouchContainer, content, item, button, circle, clickable } =

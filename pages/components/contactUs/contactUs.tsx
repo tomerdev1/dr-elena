@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next";
 import GetInTouch from "./components/getInTouch";
 import Map from "./components/map";
 import styles from "./contactUs.module.scss";
-import SocialNetworks from "../socialNetworks/socialNetworks";
 import useIsMobile from "@/hooks/useIsMobile";
+import SocialNetworks from "../socialNetworks/socialNetworks";
 
 const ContactUs: React.FC = () => {
   const { contactUsContainer, title, content } = styles;

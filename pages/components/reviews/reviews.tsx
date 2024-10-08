@@ -1,13 +1,13 @@
 import { useTranslation } from "react-i18next";
 import styles from "./reviews.module.scss";
 import { Carousel } from "antd";
-import CustomImage from "../common/image/customImage";
 import i18n from "@/i18n";
 import Review from "./review";
 import useIsMobile from "@/hooks/useIsMobile";
 import { cn } from "@/lib/utils";
 import reviewsData from "./reviewsData.json";
 import { ReviewScore } from "./reviewStars";
+import CustomImage from "../common/image/CustomImage";
 
 const Reviews: React.FC = () => {
   const {

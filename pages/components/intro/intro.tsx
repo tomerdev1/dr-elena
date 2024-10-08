@@ -1,7 +1,7 @@
 import styles from "./intro.module.scss";
 import { useTranslation } from "react-i18next";
 import useIsMobile from "@/hooks/useIsMobile";
-import CustomImage from "../common/image/customImage";
+import CustomImage from "../common/image/CustomImage";
 
 const Intro: React.FC = () => {
   const {
