@@ -8,9 +8,10 @@ import { Icons } from "@/public/assets/icons/icons";
 interface Props {
   title: string;
   body: string;
+  id: number;
 }
 
-const Treatment: React.FC<Props> = ({ title, body }) => {
+const Treatment: React.FC<Props> = ({ title, body, id }) => {
   const { t } = useTranslation();
   const isMobile = useIsMobile();
   const { treatment, treatmentTitle, treatmentBody, treatmentIcon } = styles;
@@ -18,18 +19,18 @@ const Treatment: React.FC<Props> = ({ title, body }) => {
     primary: variables.primary,
   };
 
-  const getIcon = (title: string) => {
-    switch (title) {
-      case "Implants":
-        return Icons["implants"];
-      case "Rehabilitation":
-        return Icons["rehabilitation"];
-      case "Aesthetics":
-        return Icons["aesthetics"];
-      case "Maintenance":
-        return Icons["maintenance"];
+  const getIcon = (id: number) => {
+    switch (id) {
+      case 1:
+        return Icons.implants;
+      case 2:
+        return Icons.rehabilitation;
+      case 3:
+        return Icons.aesthetics;
+      case 4:
+        return Icons.maintenance;
       default:
-        return Icons["maintenance"];
+        return Icons.maintenance;
     }
   };
 
@@ -37,7 +38,7 @@ const Treatment: React.FC<Props> = ({ title, body }) => {
     <div className={treatment}>
       <IconWrapper
         className={treatmentIcon}
-        icon={getIcon(title)}
+        icon={getIcon(id)}
         size={42}
         fillColor={CSS.primary}
       />
