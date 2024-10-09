@@ -35,7 +35,12 @@ const Treatments: React.FC = () => {
       <div className={treatments}>
         {Array.isArray(items) &&
           items.map((item) => (
-            <Treatment key={item.title} title={item.title} body={item.body} />
+            <Treatment
+              id={item.id}
+              key={item.title}
+              title={item.title}
+              body={item.body}
+            />
           ))}
       </div>
     </div>

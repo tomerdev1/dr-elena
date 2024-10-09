@@ -24,7 +24,6 @@ i18n
     supportedLngs: ["he", "en", "ru"],
     fallbackLng: "he",
     resources,
-    debug: true,
     interpolation: {
       escapeValue: false, // React already escapes values
     },
