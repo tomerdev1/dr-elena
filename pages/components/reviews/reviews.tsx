@@ -36,7 +36,7 @@ const Reviews: React.FC = () => {
         <div className={firstColor}>
           <CustomImage
             src={"/assets/images/happyGirl.png"}
-            blurDataURL={"/assets/images/happyGirlBlur.png"}
+            blurDataURL={"/assets/images/happyGirlBlur.jpg"}
             placeholder="blur"
             className={cn(direction == "rtl" ? imageRtl : imageLtr, image)}
             width={0}
