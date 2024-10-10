@@ -3,9 +3,8 @@
 .secondIntroItem {
   display: flex;
   align-items: center;
-  gap: 24px;
-  padding: 2rem;
-  width: 420px;
+  gap: 2rem;
+  padding: 2rem 8rem;
   color: $background;
   border-radius: 20px;
   .secondIntroIcon {
@@ -16,8 +15,8 @@
   .experienceIcon {
     border: 2px solid $primary;
     font-weight: 100;
-    height: 32px;
-    width: 32px;
+    min-height: 32px;
+    min-width: 32px;
     font-size: large;
     display: flex;
     align-items: center;
@@ -33,5 +32,6 @@
 @media (max-width: 768px) {
   .secondIntroItem {
     width: unset !important;
+    padding: 1rem !important;
   }
 }
