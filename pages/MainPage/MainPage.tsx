@@ -30,7 +30,7 @@ const MainPage: React.FC = () => {
   return (
     <div className={cn(app, i18n.language == "he" && rtl)}>
       <Script
-        src="www.drsk.co.il/nagishli.js?v=2.3"
+        // src="www.drsk.co.il/nagishli.js?v=2.3"
         // src="http://localhost:3000/nagishli.js?v=2.3"
         charSet="utf-8"
         defer
