@@ -14,7 +14,15 @@ interface Props {
 const Treatment: React.FC<Props> = ({ title, body, id }) => {
   const { t } = useTranslation();
   const isMobile = useIsMobile();
-  const { treatment, treatmentTitle, treatmentBody, treatmentIcon } = styles;
+  const {
+    treatment,
+    treatmentTitle,
+    treatmentBody,
+    treatmentIcon,
+    topTriangle,
+    bottomTriangle,
+    mockIcon,
+  } = styles;
   const CSS = {
     primary: variables.primary,
   };
@@ -36,14 +44,20 @@ const Treatment: React.FC<Props> = ({ title, body, id }) => {
 
   return (
     <div className={treatment}>
-      <IconWrapper
-        className={treatmentIcon}
-        icon={getIcon(id)}
-        size={42}
-        fillColor={CSS.primary}
-      />
-      <span className={treatmentTitle}>{title}</span>
+      <div className={topTriangle}>
+        <IconWrapper
+          className={treatmentIcon}
+          icon={getIcon(id)}
+          size={42}
+          fillColor={CSS.primary}
+        />
+      </div>
+
+      <h2 className={treatmentTitle}>{title}</h2>
       <span className={treatmentBody}>{body}</span>
+      <div className={bottomTriangle}>
+        <div style={{ height: "42px", width: "42px" }} />
+      </div>
     </div>
   );
 };

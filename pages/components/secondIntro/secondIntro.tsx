@@ -33,10 +33,10 @@ const SecondIntro: React.FC = () => {
             i18n.language == "ru" ? firstPartContainerRU : ""
           )}
         >
-          <span className={title}>{t("secondIntro.title.firstText")}</span>
+          <h2 className={title}>{t("secondIntro.title.firstText")}</h2>
           <mark className={marker}>{t("secondIntro.title.marked")}</mark>
         </div>
-        <span className={title}>{t("secondIntro.title.secondText")}</span>
+        <h2 className={title}>{t("secondIntro.title.secondText")}</h2>
       </div>
 
       <div className={secondIntroItems}>

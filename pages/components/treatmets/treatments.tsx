@@ -1,13 +1,6 @@
 import { useTranslation } from "react-i18next";
 import styles from "./treatments.module.scss";
 import Treatment from "./treatment";
-import { FC, SVGProps } from "react";
-import Aesthetics from "@/public/assets/icons/treatments/aesthetics";
-import Implants2 from "@/public/assets/icons/treatments/implants2";
-import Rehabilitation2 from "@/public/assets/icons/treatments/rehabilitation2";
-import Maintenance from "@/public/assets/icons/treatments/maintenance";
-import { Icons } from "@/public/assets/icons/icons";
-import { LucideProps } from "lucide-react";
 
 interface TreatmentItem {
   title: string;
@@ -31,7 +24,7 @@ const Treatments: React.FC = () => {
 
   return (
     <div className={treatmentsContainer}>
-      <span className={treatmentsTitle}>{t("treatments.title")}</span>
+      <h2 className={treatmentsTitle}>{t("treatments.title")}</h2>
       <div className={treatments}>
         {Array.isArray(items) &&
           items.map((item) => (

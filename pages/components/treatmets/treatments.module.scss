@@ -7,22 +7,24 @@
   .treatmentsTitle {
     font-size: x-large;
     text-align: start;
-    line-height: $default-line-height;
     color: $background;
     letter-spacing: 1px;
+    font-weight: 400;
   }
   .treatments {
     display: flex;
     flex-direction: row;
     width: 100%;
+    overflow: hidden;
+    align-items: start;
     justify-content: space-around;
-    align-items: center;
   }
 }
 
 @media (max-width: 768px) {
   .treatments {
     flex-direction: column !important;
+    align-items: center !important;
     gap: 30px;
   }
 }

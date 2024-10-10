@@ -8,7 +8,6 @@
   border-radius: 0 0 30px 30px;
   padding-top: $default-padding;
   .titleContainer {
-    font-size: 42px;
     color: $background;
     display: flex;
     flex-direction: column;
@@ -20,6 +19,7 @@
       flex-direction: row;
       gap: 24px;
       .marker {
+        font-size: 36px;
         font-weight: lighter;
         color: $background;
         margin: 0 -0.4em;
@@ -41,9 +41,11 @@
         animation-fill-mode: forwards;
         background-repeat: no-repeat;
       }
-      .title {
-        font-weight: lighter;
-      }
+    }
+    .title {
+      font-weight: lighter;
+      font-size: 36px;
+      margin: 0;
     }
   }
   .secondIntroItems {

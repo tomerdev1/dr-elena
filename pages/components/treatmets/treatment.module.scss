@@ -1,30 +1,54 @@
 @import "../../../styles/variables";
 .treatment {
-  width: 300px;
-  height: 400px;
+  min-height: 52vh;
   display: flex;
   justify-content: center;
+  max-width: 300px;
   flex-direction: column;
   align-items: center;
-  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
-  padding: 20px;
-  background-color: $primary-ll;
-  .treatmentIcon {
-    flex: 1;
+  margin: 0 2rem;
+  .topTriangle {
+    width: 100%;
+    aspect-ratio: 1 / cos(70deg);
+    transform: translateY(1px);
+    background-color: $primary-ll;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+
+    .treatmentIcon {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .bottomTriangle {
+    background-color: $primary-ll;
+    width: 100%;
+    height: 100px;
+    aspect-ratio: 1 / cos(70deg);
     display: flex;
     align-items: center;
-    justify-content: center;
+    transform: translateY(-1px);
+    clip-path: polygon(50% 100%, 100% 0, 0 0);
   }
+
   .treatmentTitle {
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     color: $primary-d;
     font-size: larger;
+    margin: 0;
+    padding: 12px 0;
     font-weight: 600;
+    background-color: $primary-ll;
+    width: 100%;
   }
   .treatmentBody {
+    background-color: $primary-ll;
     flex: 5;
     padding: 0 2rem;
     display: flex;
