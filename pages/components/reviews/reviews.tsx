@@ -48,7 +48,7 @@ const Reviews: React.FC = () => {
         </div>
 
         <div className={secondColor}>
-          <span className={title}>{t("reviews.title")}</span>
+          <h2 className={title}>{t("reviews.title")}</h2>
           <div
             className={cn(
               content,

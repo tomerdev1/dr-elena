@@ -11,7 +11,7 @@ const ContactUs: React.FC = () => {
   const isMobile = useIsMobile();
   return (
     <div className={contactUsContainer}>
-      <span className={title}>{t("contactUs.title")}</span>
+      <h2 className={title}>{t("contactUs.title")}</h2>
       <div className={content}>
         <GetInTouch />
         <Map />
