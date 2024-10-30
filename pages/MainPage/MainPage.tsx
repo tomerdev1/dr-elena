@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import React from "react";
 import Header from "@/pages/components/header/header";
 import Script from "next/script";
+import AccessibilityStatement from "../AccessibilityStatement/accessibilityStatement";
 
 const MainPage: React.FC = () => {
   const { app, rtl } = styles;
@@ -31,7 +32,6 @@ const MainPage: React.FC = () => {
     <div className={cn(app, i18n.language == "he" && rtl)}>
       <Script
         src="https://drsk.co.il/nagishli.js?v=2.3"
-        // src="http://localhost:3000/nagishli.js?v=2.3"
         charSet="utf-8"
         defer
         onError={(e) => console.error("Error loading script:", e)}

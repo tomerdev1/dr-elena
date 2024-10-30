@@ -19,8 +19,9 @@ const Intro: React.FC = () => {
     <div className={introContainer}>
       <div className={coverContainer}>
         <CustomImage
-          src={"/assets/images/cover.jpg"}
-          blurDataURL={"/assets/images/coverBlur.jpeg"}
+          src={"/assets/images/coverBlur.jpeg"}
+          blurDataURL={"/assets/images/coverBlurer.jpg"}
+          alt="cover image"
           placeholder="blur"
           width={0}
           height={0}

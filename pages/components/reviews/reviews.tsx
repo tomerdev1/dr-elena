@@ -35,9 +35,8 @@ const Reviews: React.FC = () => {
       <div className={colorsContainer}>
         <div className={firstColor}>
           <CustomImage
-            src={"/assets/images/happyGirl.png"}
-            blurDataURL={"/assets/images/happyGirlBlur.jpg"}
-            placeholder="blur"
+            src={"/assets/images/happyGirlBlur.png"}
+            alt="decorative image of a happy person"
             className={cn(direction == "rtl" ? imageRtl : imageLtr, image)}
             width={0}
             height={isMobile ? 190 : 460}
