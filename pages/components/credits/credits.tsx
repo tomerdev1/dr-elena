@@ -1,3 +1,4 @@
+import AccessibilityStatementLink from "../../AccessibilityStatement/accessibilityStatement";
 import CustomButton from "../common/button/customButton";
 import style from "./credits.module.scss";
 
@@ -15,6 +16,7 @@ const Credits: React.FC = () => {
       >
         Freepik
       </CustomButton>
+      <AccessibilityStatementLink />
     </div>
   );
 };

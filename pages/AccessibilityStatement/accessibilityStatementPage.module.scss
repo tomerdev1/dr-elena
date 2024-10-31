@@ -1,0 +1,21 @@
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    padding: 0px 20px 60px;
+    white-space: pre-line;
+    max-width: 800px;
+    direction: rtl;
+    justify-content: center;
+    .header {
+      font-size: xx-large;
+    }
+    .body {
+      font-size: x-large;
+    }
+  }
+
+  font-family: "Open Sans", sans-serif;
+}

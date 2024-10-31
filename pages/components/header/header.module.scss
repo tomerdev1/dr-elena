@@ -12,8 +12,8 @@
   z-index: 10;
   padding: 0 $default-padding;
   .selectContainer {
-    min-width: 120px;
-    max-width: 120px;
+    min-width: 12rem;
+    max-width: 12rem;
     flex: 1;
   }
   .logoContainer {
@@ -24,6 +24,11 @@
     width: 68px;
   }
 }
-.headerContainerMobile {
-  height: 6rem;
+
+@media (max-width: 768px) {
+  .selectContainer {
+    min-width: 120px !important;
+    max-width: 120px !important;
+    flex: 1;
+  }
 }
