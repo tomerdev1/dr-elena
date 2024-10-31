@@ -2,9 +2,10 @@
 
 .container {
   display: flex;
-  flex-direction: row;
-  height: 42px;
+  flex-direction: column;
   font-size: smaller;
+  padding: 8px;
+  gap: 4px;
   align-items: center;
   direction: ltr;
   justify-content: center;
