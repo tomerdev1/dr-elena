@@ -3,7 +3,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  height: 36px;
+  height: 42px;
   font-size: smaller;
   align-items: center;
   direction: ltr;
@@ -11,11 +11,16 @@
   background-color: $gray;
   border-top: 1px solid $primary-ll;
   margin-top: $default-padding;
-  .text {
-    color: $black;
-  }
-  .buttonLink {
-    color: blue;
-    text-decoration: none;
+  .freepik {
+    display: flex;
+    white-space: pre;
+    align-items: center;
+    .text {
+      color: $black;
+    }
+    .buttonLink {
+      color: blue;
+      text-decoration: none;
+    }
   }
 }
