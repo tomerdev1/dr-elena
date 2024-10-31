@@ -21,6 +21,7 @@ const MainPage: React.FC = () => {
   const [isClient, setIsClient] = React.useState(false);
 
   React.useEffect(() => {
+    document.title = "Dr. Skliaruk";
     setIsClient(true); // Ensures the component renders only on the client side
   }, []);
 
