@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 import React from "react";
 import Header from "@/pages/components/header/header";
 import Script from "next/script";
-import AccessibilityStatement from "../AccessibilityStatement/accessibilityStatement";
+import Head from "next/head";
 
 const MainPage: React.FC = () => {
   const { app, rtl } = styles;
@@ -31,6 +31,10 @@ const MainPage: React.FC = () => {
 
   return (
     <div className={cn(app, i18n.language == "he" && rtl)}>
+      <Head>
+        <title>Dr. Skliaruk</title>
+      </Head>
+
       <Script
         src="https://drsk.co.il/nagishli.js?v=2.3"
         charSet="utf-8"
