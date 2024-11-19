@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./header.module.scss";
-import { cn } from "@/lib/utils";
+import { cn, getFlagIcon } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 import CustomSelect from "../common/select/CustomSelect";
 
@@ -10,6 +10,8 @@ const Header: React.FC = () => {
     headerContainer,
     headerContainerMobile,
     selectContainer,
+    selectOption,
+    rtl,
   } = styles;
   const { i18n } = useTranslation();
 
@@ -21,17 +23,20 @@ const Header: React.FC = () => {
     {
       label: "עברית",
       value: "he",
-      emoji: "🇮🇱",
+      icon: getFlagIcon("he"),
+      className: cn(selectOption, rtl),
     },
     {
       label: "English",
       value: "en",
-      emoji: "🇺🇸",
+      icon: getFlagIcon("en"),
+      className: selectOption,
     },
     {
       label: "русский",
       value: "ru",
-      emoji: "🇷🇺",
+      icon: getFlagIcon("ru"),
+      className: selectOption,
     },
   ];
 

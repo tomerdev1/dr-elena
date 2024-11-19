@@ -14,6 +14,6 @@ $default-padding: 2rem;
 $default-line-height: 350%;
 
 @mixin background-opacity($color, $opacity: 0.3) {
-  background: $color; /* The Fallback */
-  background: rgba($color, $opacity);
+  background: $color !important; /* The Fallback */
+  background: rgba($color, $opacity) !important;
 }
