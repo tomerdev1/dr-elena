@@ -23,7 +23,7 @@ const CustomSelect: React.FC<Props> = (props) => {
   const labelRender: LabelRender = (props) => {
     const { label, value } = props;
     return (
-      <div className={cn(selectLabel)}>
+      <div className={selectLabel}>
         {value.toString() == "he" && getFlagIcon(value.toString())}
         <span>{label}</span>
         {value.toString() != "he" && getFlagIcon(value.toString())}

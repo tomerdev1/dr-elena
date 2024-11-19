@@ -28,6 +28,5 @@
 @media (max-width: 768px) {
   .selectPopup {
     @include background-opacity($primary, 0.8);
-    color: red !important;
   }
 }

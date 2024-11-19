@@ -3,55 +3,29 @@ import * as React from "react";
 const RUFlag = ({ ...props }: LucideProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
     width={"100%"}
     height={"100%"}
-    fill="none"
-    viewBox="0 -4 28 28"
     {...props}
   >
-    <g clipPath="url(#a)">
-      <rect
-        width={27.5}
-        height={19.5}
-        x={0.25}
-        y={0.25}
-        fill="#fff"
-        stroke="#F5F5F5"
-        strokeWidth={0.5}
-        rx={1.75}
-      />
-      <mask
-        id="b"
-        width={28}
-        height={20}
-        x={0}
-        y={0}
-        maskUnits="userSpaceOnUse"
-        style={{
-          maskType: "alpha",
-        }}
-      >
-        <rect
-          width={27.5}
-          height={19.5}
-          x={0.25}
-          y={0.25}
-          fill="#fff"
-          stroke="#fff"
-          strokeWidth={0.5}
-          rx={1.75}
-        />
-      </mask>
-      <g fillRule="evenodd" clipRule="evenodd" mask="url(#b)">
-        <path fill="#0C47B7" d="M0 13.333h28V6.667H0v6.666Z" />
-        <path fill="#E53B35" d="M0 20h28v-6.667H0V20Z" />
-      </g>
-    </g>
-    <defs>
-      <clipPath id="a">
-        <rect width={28} height={20} fill="#fff" rx={2} />
-      </clipPath>
-    </defs>
+    <path fill="#1435a1" d="M1 11h30v10H1z" />
+    <path
+      fill="#fff"
+      d="M5 4h22c2.208 0 4 1.792 4 4v4H1V8c0-2.208 1.792-4 4-4Z"
+    />
+    <path
+      fill="#c53a28"
+      d="M27 28H5c-2.208 0-4-1.792-4-4v-4h30v4c0 2.208-1.792 4-4 4Z"
+    />
+    <path
+      d="M27 4H5a4 4 0 0 0-4 4v16a4 4 0 0 0 4 4h22a4 4 0 0 0 4-4V8a4 4 0 0 0-4-4Zm3 20c0 1.654-1.346 3-3 3H5c-1.654 0-3-1.346-3-3V8c0-1.654 1.346-3 3-3h22c1.654 0 3 1.346 3 3v16Z"
+      opacity={0.15}
+    />
+    <path
+      fill="#fff"
+      d="M27 5H5a3 3 0 0 0-3 3v1a3 3 0 0 1 3-3h22a3 3 0 0 1 3 3V8a3 3 0 0 0-3-3Z"
+      opacity={0.2}
+    />
   </svg>
 );
 export default RUFlag;
