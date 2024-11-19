@@ -1,11 +1,14 @@
 import { Select, SelectProps, Space } from "antd";
 import styles from "./CustomSelect.module.scss";
 import React from "react";
+import IconWrapper from "../icon/icon";
+import { Icons } from "@/public/assets/icons/icons";
+import { cn, getFlagIcon } from "@/lib/utils";
 
 interface Props extends SelectProps {}
 
 const CustomSelect: React.FC<Props> = (props) => {
-  const { selectProps, selectLabel } = styles;
+  const { selectProps, selectLabel, selectPopup } = styles;
   type LabelRender = SelectProps["labelRender"];
   const [isClient, setIsClient] = React.useState(false);
 
@@ -19,17 +22,25 @@ const CustomSelect: React.FC<Props> = (props) => {
 
   const labelRender: LabelRender = (props) => {
     const { label, value } = props;
-    return <span className={selectLabel}>{label}</span>;
+    return (
+      <div className={selectLabel}>
+        {value.toString() == "he" && getFlagIcon(value.toString())}
+        <span>{label}</span>
+        {value.toString() != "he" && getFlagIcon(value.toString())}
+      </div>
+    );
   };
 
   return (
     <Select
       {...props}
       className={selectProps}
+      popupClassName={selectPopup}
       labelRender={labelRender}
+      suffixIcon={<IconWrapper size={22} icon={Icons.downArrow} />}
       optionRender={(option) => (
         <Space>
-          <span role="img">{option.data.emoji}</span>
+          <span role="img">{option.data.icon}</span>
           <span>{option.data.label}</span>
         </Space>
       )}

@@ -15,6 +15,10 @@ import Phone from "./getInTouch/phone";
 import AddressIcon from "./getInTouch/address";
 import Quote from "./reviews/quote";
 import Star from "./reviews/star";
+import DownArrow from "./header/downArrow";
+import USFlag from "./flags/us";
+import RUFlag from "./flags/ru";
+import ILFlag from "./flags/il";
 
 export const Icons = {
   whastsapp: Whastsapp,
@@ -34,4 +38,8 @@ export const Icons = {
   addressIcon: AddressIcon,
   quote: Quote,
   star: Star,
+  downArrow: DownArrow,
+  usFlag: USFlag,
+  ruFlag: RUFlag,
+  ilFlag: ILFlag,
 };

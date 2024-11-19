@@ -12,8 +12,8 @@
   z-index: 10;
   padding: 0 $default-padding;
   .selectContainer {
-    min-width: 12rem;
-    max-width: 12rem;
+    max-width: 16rem;
+    height: 3rem;
     flex: 1;
   }
   .logoContainer {
@@ -25,10 +25,27 @@
   }
 }
 
+.selectOption {
+  color: $primary-l !important;
+  padding: 8px 8px !important;
+  font-size: large !important;
+  &.rtl {
+    direction: rtl;
+  }
+  &:hover {
+    @include background-opacity($primary-l, 0.3);
+  }
+  &[aria-selected="true"] {
+    @include background-opacity($primary-l, 0.4);
+    color: $background-dd !important;
+  }
+}
+
 @media (max-width: 768px) {
-  .selectContainer {
-    min-width: 120px !important;
-    max-width: 120px !important;
-    flex: 1;
+  .logoContainer {
+    flex: 1 !important;
+  }
+  .selectOption {
+    color: $primary-ll !important;
   }
 }

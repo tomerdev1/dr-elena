@@ -1,7 +1,32 @@
 @import "../../../../styles/variables";
 .selectProps {
   width: 100%;
-  //   .selectLabel {
-  //     color: $text-primary;
-  //   }
+  height: 100%;
+  [class="ant-select-selector"] {
+    background: transparent !important;
+    border-color: $primary !important;
+    color: $primary-l;
+  }
+  [class="ant-select-selection-item"] {
+    color: inherit !important;
+  }
+  [class="ant-select-arrow"] {
+    color: $primary-l;
+  }
+  .selectLabel {
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+}
+
+.selectPopup {
+  @include background-opacity($primary, 0.4);
+}
+
+@media (max-width: 768px) {
+  .selectPopup {
+    @include background-opacity($primary, 0.8);
+  }
 }
