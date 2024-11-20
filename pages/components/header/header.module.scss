@@ -36,7 +36,7 @@
     @include background-opacity($primary-l, 0.3);
   }
   &[aria-selected="true"] {
-    @include background-opacity($primary-l, 0.4);
+    @include background-opacity($primary-ll, 0.4);
     color: $background-dd !important;
   }
 }
