@@ -23,7 +23,7 @@
         font-weight: lighter;
         color: $background;
         margin: 0 -0.4em;
-        padding: 0.1em 0.4em;
+        padding: 0em 0.4em;
         border-radius: 0.8em 0.3em;
         background: transparent;
         background-size: 0% 100%;
@@ -35,11 +35,13 @@
         );
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
-        animation-name: highlight;
-        animation-duration: 2s;
-        animation-delay: 1s;
         animation-fill-mode: forwards;
         background-repeat: no-repeat;
+        animation: none;
+      }
+
+      .highlightActivated {
+        animation: highlight 2s ease forwards; /* Ensure duration, easing, and forwards behavior */
       }
     }
     .title {

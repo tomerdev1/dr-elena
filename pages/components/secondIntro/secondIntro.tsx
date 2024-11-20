@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./secondIntro.module.scss";
 import SecondIntroItem from "./secondIntroItem";
@@ -17,12 +18,37 @@ const SecondIntro: React.FC = () => {
     marker,
     firstPartContainer,
     firstPartContainerRU,
+    highlightActivated,
   } = styles;
   const { t, i18n } = useTranslation();
 
   const items = t("secondIntro.items", {
     returnObjects: true,
   }) as SecondIntroItem[];
+
+  const markerRef = useRef<any>(null);
+  const [highlightActive, setHighlightActive] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHighlightActive(true); // Trigger the animation
+          observer.disconnect(); // Stop observing once the animation is triggered
+        }
+      },
+      {
+        rootMargin: `0px 0px -450px 0px`, // Offset to trigger 200px before the bottom
+        threshold: 0, // Trigger as soon as it enters the adjusted root margin
+      } // Adjust threshold as needed
+    );
+
+    if (markerRef.current) {
+      observer.observe(markerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className={secondIntro}>
@@ -34,7 +60,12 @@ const SecondIntro: React.FC = () => {
           )}
         >
           <h2 className={title}>{t("secondIntro.title.firstText")}</h2>
-          <mark className={marker}>{t("secondIntro.title.marked")}</mark>
+          <mark
+            className={cn(marker, highlightActive && highlightActivated)}
+            ref={markerRef}
+          >
+            {t("secondIntro.title.marked")}
+          </mark>
         </div>
         <h2 className={title}>{t("secondIntro.title.secondText")}</h2>
       </div>
