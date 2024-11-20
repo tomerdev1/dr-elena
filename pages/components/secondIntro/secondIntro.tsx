@@ -33,14 +33,14 @@ const SecondIntro: React.FC = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setHighlightActive(true); // Trigger the animation
-          observer.disconnect(); // Stop observing once the animation is triggered
+          setHighlightActive(true);
+          observer.disconnect();
         }
       },
       {
-        rootMargin: `0px 0px -450px 0px`, // Offset to trigger 200px before the bottom
-        threshold: 0, // Trigger as soon as it enters the adjusted root margin
-      } // Adjust threshold as needed
+        rootMargin: `0px 0px -450px 0px`,
+        threshold: 0,
+      }
     );
 
     if (markerRef.current) {
