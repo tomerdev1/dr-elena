@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import styles from "./secondIntro.module.scss";
 import SecondIntroItem from "./secondIntroItem";
 import { cn } from "@/lib/utils";
+import { useViewportObserver } from "@/hooks/useViewportObserver";
 
 interface SecondIntroItem {
   text: string;
@@ -26,29 +27,14 @@ const SecondIntro: React.FC = () => {
     returnObjects: true,
   }) as SecondIntroItem[];
 
-  const markerRef = useRef<any>(null);
   const [highlightActive, setHighlightActive] = useState(false);
+  const { isVisible, ref } = useViewportObserver({ marginFromBottom: -450 });
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHighlightActive(true);
-          observer.disconnect();
-        }
-      },
-      {
-        rootMargin: `0px 0px -450px 0px`,
-        threshold: 0,
-      }
-    );
-
-    if (markerRef.current) {
-      observer.observe(markerRef.current);
+    if (isVisible) {
+      setHighlightActive(true);
     }
-
-    return () => observer.disconnect();
-  }, []);
+  }, [isVisible]);
 
   return (
     <div className={secondIntro}>
@@ -62,7 +48,7 @@ const SecondIntro: React.FC = () => {
           <h2 className={title}>{t("secondIntro.title.firstText")}</h2>
           <mark
             className={cn(marker, highlightActive && highlightActivated)}
-            ref={markerRef}
+            ref={ref}
           >
             {t("secondIntro.title.marked")}
           </mark>
