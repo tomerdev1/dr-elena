@@ -22,11 +22,11 @@
 }
 
 .selectPopup {
-  @include background-opacity($primary, 0.4);
+  @include background-opacity($background, 0.6);
 }
 
 @media (max-width: 768px) {
   .selectPopup {
-    @include background-opacity($primary, 0.8);
+    @include background-opacity($background, 0.95);
   }
 }

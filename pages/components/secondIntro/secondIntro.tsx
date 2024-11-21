@@ -1,7 +1,9 @@
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./secondIntro.module.scss";
 import SecondIntroItem from "./secondIntroItem";
 import { cn } from "@/lib/utils";
+import { useViewportObserver } from "@/hooks/useViewportObserver";
 
 interface SecondIntroItem {
   text: string;
@@ -17,12 +19,22 @@ const SecondIntro: React.FC = () => {
     marker,
     firstPartContainer,
     firstPartContainerRU,
+    highlightActivated,
   } = styles;
   const { t, i18n } = useTranslation();
 
   const items = t("secondIntro.items", {
     returnObjects: true,
   }) as SecondIntroItem[];
+
+  const [highlightActive, setHighlightActive] = useState(false);
+  const { isVisible, ref } = useViewportObserver({ marginFromBottom: -450 });
+
+  useEffect(() => {
+    if (isVisible) {
+      setHighlightActive(true);
+    }
+  }, [isVisible]);
 
   return (
     <div className={secondIntro}>
@@ -34,7 +46,12 @@ const SecondIntro: React.FC = () => {
           )}
         >
           <h2 className={title}>{t("secondIntro.title.firstText")}</h2>
-          <mark className={marker}>{t("secondIntro.title.marked")}</mark>
+          <mark
+            className={cn(marker, highlightActive && highlightActivated)}
+            ref={ref}
+          >
+            {t("secondIntro.title.marked")}
+          </mark>
         </div>
         <h2 className={title}>{t("secondIntro.title.secondText")}</h2>
       </div>
